@@ -14,6 +14,62 @@
     padding: 1.2rem;
     gap: 2.5rem;
     border: 1px solid #4b4b4b;
+    overflow: hidden;
+    opacity: 0;
+    animation: spreadBorder 2s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s; /* Smoother easing */
+}
+
+.navbar-container::before {
+    content: '';
+    position: absolute;
+    width: 10px; /* Smaller initial circle */
+    height: 10px;
+    border: 2px solid #000; /* Black border */
+    background: transparent; /* Transparent inside */
+    border-radius: 50%;
+    top: 50%;
+    left: -10px; /* Start from the left, adjusted for smaller size */
+    transform: translateY(-50%);
+    animation: moveAndBurst 2s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Smoother easing */
+}
+
+@keyframes moveAndBurst {
+    0% {
+        left: -10px; /* Start off-screen left */
+        top: 50%;
+        width: 10px;
+        height: 10px;
+    }
+    50% {
+        left: 40%; /* Move to between Project and Skills */
+        top: 52%; /* Subtle gravity drop */
+        width: 10px;
+        height: 10px;
+    }
+    60% {
+        width: 20px; /* Smaller burst */
+        height: 20px;
+    }
+    100% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes spreadBorder {
+    0% {
+        opacity: 0;
+        border-width: 0;
+    }
+    70% {
+        opacity: 1;
+        border-width: 0;
+    }
+    100% {
+        opacity: 1;
+        border-width: 1px;
+    }
 }
 
 .navbar-link {
@@ -32,6 +88,17 @@
     transition: background 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.3s ease-in-out;
     cursor: pointer;
     text-decoration: none;
+    opacity: 0;
+    animation: fadeInLinks 1.5s ease-out forwards 2s; /* Delayed and smoother */
+}
+
+@keyframes fadeInLinks {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .navbar-link:hover {

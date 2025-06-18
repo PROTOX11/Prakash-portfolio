@@ -1,3 +1,58 @@
+/* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Star container */
+.star-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Behind content */
+}
+
+/* Star animation */
+.background-star {
+    position: absolute;
+    width: 24px; /* Match SVG width */
+    height: 24px; /* Match SVG height */
+    opacity: 0.5; /* 50% opacity */
+    animation: randomDrop 10s linear infinite; /* Slower drop */
+    pointer-events: none;
+}
+
+.background-star .star-svg {
+    width: 100%;
+    height: 100%;
+    color: #ffd700; /* Gold color for stars, adjust as needed */
+}
+
+/* Keyframe for random drop with direction */
+@keyframes randomDrop {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(calc(var(--dx, 0) * 25%), calc(var(--dy, 1) * 25%)) rotate(45deg);
+    }
+    50% {
+        transform: translate(calc(var(--dx, 0) * 50%), calc(var(--dy, 1) * 50%)) rotate(90deg);
+    }
+    75% {
+        transform: translate(calc(var(--dx, 0) * 75%), calc(var(--dy, 1) * 75%)) rotate(135deg);
+    }
+    100% {
+        transform: translate(calc(var(--dx, 0) * 100%), calc(var(--dy, 1) * 100%)) rotate(180deg);
+        opacity: 0.5; /* Maintain 50% opacity at end */
+    }
+}
+
+/* Existing styles */
 .front-ptop {
     font-size: 50px;
     padding-top: 100px;
@@ -9,7 +64,7 @@
 
 .t2 {
     font-size: 70px;
-    margin-top: -40px;
+    margin-top: -50px;
 }
 
 .skill_set {
@@ -19,6 +74,7 @@
     justify-content: flex-start;
     padding: 20px;
     padding-left: 40px;
+    margin-top: -30px;
 }
 
 .skill-item {
@@ -43,21 +99,32 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* Fade-in color for padding area */
+    background: rgba(255, 255, 255, 0.2);
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
-    /* Clip to padding area, excluding text */
-    clip-path: inset(0.5rem 1rem); /* Matches padding: 0.5rem 1rem */
+    clip-path: inset(0.5rem 1rem);
 }
 
 .skill-item:hover::before {
-    opacity: 1; /* Fade in the padding area on hover */
+    opacity: 1;
 }
 
 .skill-item:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Only background changes */
-    /* Removed color change to keep text unchanged */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Remove animations for Spring, Java, MERN, SQL */
+.skill-item.no-animation {
+    transition: none;
+}
+
+.skill-item.no-animation::before {
+    display: none;
+}
+
+.skill-item.no-animation:hover {
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 @media (max-width: 640px) {
@@ -66,18 +133,51 @@
     }
 }
 
-*,
-::after,
-::before,
-::backdrop {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.front-pro {
+    padding-left: 40px;
+    margin-top: 0;
 }
 
-:root {
-    --spacing: 0.25rem;
-    --text-sm: 0.875rem;
-    --color-gray-300: #d3d3d3;
-    --color-white: #ffffff;
+.front-pro span {
+    border: 1px solid;
+    gap: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 100px;
+    justify-content: center;
+    text-align: center;
+    height: 30px;
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    vertical-align: top;
+    margin-top: 0;
+}
+
+.front-pro span:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.front-pro span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--x) var(--y), rgba(0, 255, 0, 0.2), transparent 70%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.front-pro span:hover::before {
+    opacity: 1;
+}
+
+.front-pro .t4 {
+    margin-left: 50px;
 }
