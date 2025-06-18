@@ -1,7 +1,16 @@
 /* src/App.css */
 :root {
-  --primary-text: #000000;
-  --bg-color: #ffffff;
+  --primary-text: #303030;
+  --bg-color: #faf7ef;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
