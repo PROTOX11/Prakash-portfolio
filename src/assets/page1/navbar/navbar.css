@@ -1,0 +1,41 @@
+/* Amazing rounded navbar styles */
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 50px;
+    background: #fff;
+    width: 25%;
+    height: 5px;
+    border-radius: 3rem;
+    box-shadow: 0 4px 24px rgba(95, 95, 95, 0.08);
+    padding: 1.2rem 1.5rem;
+    gap: 2.5rem;
+    border: 1px solid #4b4b4b;
+}
+
+.navbar-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 2rem;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 5%;
+    height: 25%;
+    color: #222;
+    border: 1px solid #222;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    background: #222;
+    color: #fff;
+    transform: translateY(-3px) scale(1.06);
+}
