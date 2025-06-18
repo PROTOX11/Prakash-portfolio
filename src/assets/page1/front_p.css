@@ -13,46 +13,75 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    z-index: -1; /* Behind content */
+    z-index: -1;
+    /* Behind content */
 }
 
-/* Star animation */
-.background-star {
+/* Animated star images */
+.animated-star {
     position: absolute;
-    width: 24px; /* Match SVG width */
-    height: 24px; /* Match SVG height */
-    opacity: 0.5; /* 50% opacity */
-    animation: randomDrop 10s linear infinite; /* Slower drop */
+    width: 30px;
+    /* Reduced size */
+    height: auto;
+    opacity: 0.7;
     pointer-events: none;
+    animation-name: moveDiagonal;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: center center;
+
 }
 
-.background-star .star-svg {
-    width: 100%;
-    height: 100%;
-    color: #ffd700; /* Gold color for stars, adjust as needed */
+/* Different animation durations and delays for each image */
+.animated-star-1 {
+    top: -20%;
+    right: -20%;
+    animation-duration: 25s;
+    animation-delay: 0s;
 }
 
-/* Keyframe for random drop with direction */
-@keyframes randomDrop {
+.animated-star-2 {
+    top: -30%;
+    right: -10%;
+    animation-duration: 35s;
+    animation-delay: 5s;
+}
+
+.animated-star-3 {
+    top: -25%;
+    right: -15%;
+    animation-duration: 28s;
+    animation-delay: 10s;
+}
+
+.animated-star-4 {
+    top: -35%;
+    right: -5%;
+    animation-duration: 38s;
+    animation-delay: 3s;
+}
+
+.animated-star-5 {
+    top: -15%;
+    right: -25%;
+    animation-duration: 33s;
+    animation-delay: 3s;
+}
+
+/* Keyframes for diagonal movement from top right to bottom left */
+@keyframes moveDiagonal {
     0% {
-        transform: translate(0, 0) rotate(0deg);
+        transform: translate(0, 0);
+        opacity: 0.7;
     }
-    25% {
-        transform: translate(calc(var(--dx, 0) * 25%), calc(var(--dy, 1) * 25%)) rotate(45deg);
-    }
-    50% {
-        transform: translate(calc(var(--dx, 0) * 50%), calc(var(--dy, 1) * 50%)) rotate(90deg);
-    }
-    75% {
-        transform: translate(calc(var(--dx, 0) * 75%), calc(var(--dy, 1) * 75%)) rotate(135deg);
-    }
+
     100% {
-        transform: translate(calc(var(--dx, 0) * 100%), calc(var(--dy, 1) * 100%)) rotate(180deg);
-        opacity: 0.5; /* Maintain 50% opacity at end */
+        transform: translate(-120vw, 120vh);
+        opacity: 0.7;
     }
 }
 
-/* Existing styles */
+/* Rest of your CSS remains unchanged */
 .front-ptop {
     font-size: 50px;
     padding-top: 100px;
@@ -114,7 +143,6 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Remove animations for Spring, Java, MERN, SQL */
 .skill-item.no-animation {
     transition: none;
 }
@@ -141,7 +169,7 @@
 .front-pro span {
     border: 1px solid;
     gap: 5px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 18px;
     width: 100px;
     justify-content: center;
@@ -158,7 +186,7 @@
 }
 
 .front-pro span:hover {
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 20px rgba(179, 173, 142, 0.5);
 }
 
 .front-pro span::before {
@@ -181,3 +209,7 @@
 .front-pro .t4 {
     margin-left: 50px;
 }
+
+
+/* magnetcursor here  */
+

@@ -1,0 +1,72 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.homeloadergrey {
+    position: fixed;
+    z-index: 5000;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: #323436;
+}
+
+.homeloaderlightgreen {
+    position: fixed;
+    z-index: 5001;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: #07da8a;
+}
+
+.homeloaderblack {
+    position: fixed;
+    z-index: 5002;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: #121212;
+    display: flex;
+}
+
+.text {
+    position: relative;
+    color: white;
+    margin: 0;
+    user-select: none;
+}
+
+.target,
+.cursor {
+    border-radius: 50px;
+    width: 0px;
+    height: 0px;
+    border: solid 1px #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* Green Tri Small */
+.target {
+    border-radius: 0;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: solid 1px #07da8a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50px;
+}
