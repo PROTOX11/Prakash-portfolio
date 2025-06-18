@@ -108,7 +108,7 @@
 
 .skill-item {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
     border-radius: 9999px;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -167,7 +167,7 @@
 }
 
 .front-pro span {
-    border: 1px solid;
+    border: 0.8px solid;
     gap: 5px;
     border-radius: 8px;
     font-size: 18px;
@@ -175,11 +175,10 @@
     justify-content: center;
     text-align: center;
     height: 30px;
-    margin-left: 10px;
     position: relative;
     display: inline-block;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(105, 105, 105, 0.3);
     transition: box-shadow 0.3s ease;
     vertical-align: top;
     margin-top: 0;

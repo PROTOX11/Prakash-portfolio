@@ -1,0 +1,51 @@
+.social-btns-container {
+    display: flex;
+    gap: 1.5rem;
+    padding-left: 40px;
+    margin: 2rem 0;
+}
+
+.social-btn {
+    display: flex;
+    gap: 0.7rem;
+    background: #d4cdba;
+    color: #fff;
+    border-radius: 2rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 2px solid #ffffff;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.social-btn .icon {
+    font-size: 1.5rem;
+}
+
+.social-btn.github:hover {
+    background: #5a5a5a;
+    color: #ffffff;
+    transform: translateY(-2px) scale(1.05);
+}
+
+.social-btn.linkedin {
+    border-color: #ffffff;
+}
+
+.social-btn.linkedin:hover {
+    background: #90b3d6;
+    color: #fff;
+    transform: translateY(-2px) scale(1.05);
+}
+
+.social-btn.gmail {
+    border-color: #ffffff;
+}
+
+.social-btn.gmail:hover {
+    background: #be8e89;
+    color: #fff;
+    transform: translateY(-2px) scale(1.05);
+}

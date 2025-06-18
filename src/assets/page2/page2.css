@@ -1,0 +1,170 @@
+.sec_page {
+    padding-top: 200px;
+}
+
+.sec_page p {
+    font-size: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.aboutwala {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-left: 10px;
+    padding-left: 400px;
+    margin-top: 0;
+}
+
+.aboutwala .button {
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 3px 20px;
+    border: 1px solid #333;
+    background-color: #fffefb;
+    color: #646464;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.aboutwala .button:hover {
+    background-color: #9e9e9e;
+    color: #fff;
+}
+
+.about-me {
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Reduced from 0.5rem */
+    margin-top: 4rem;
+    cursor: pointer;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    position: relative;
+    transition: all 0.3s ease;
+    height: 100%;
+    padding-left: 40px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-inner {
+    position: relative;
+    z-index: 10;
+    background: rgba(250, 247, 239, 0.9);
+    /* #faf7ef with slight transparency */
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    /* Increased from 0.5rem */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 320px;
+    /* Increased from 200px */
+    max-height: 260px;
+    /* Increased from 150px */
+    min-width: 220px;
+    min-height: 180px;
+    overflow: hidden;
+}
+
+.card-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+    background: linear-gradient(135deg, #dfd2a8 0%, #f5dda9 100%);
+    opacity: 0.1;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-bg {
+    opacity: 0.2;
+}
+
+.icon-container {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .icon-container {
+    transform: rotate(6deg);
+}
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+    color: #1f2937;
+}
+
+.number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+
+.description {
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    color: #6b7280;
+    transition: color 0.3s ease;
+}
+
+.card:hover .arrow-icon {
+    color: #1f2937;
+}
+
