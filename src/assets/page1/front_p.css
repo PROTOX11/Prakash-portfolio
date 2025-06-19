@@ -92,12 +92,12 @@
     padding-left: 5vw;
     display: flex;
     flex-direction: column;
-    gap: 0.2rem; /* Reduced gap to decrease height space */
+    gap: 0.2rem;
 }
 
 .t2 {
     font-size: 8vw;
-    margin-top: -2.5rem; /* Increased negative margin to reduce space */
+    margin-top: -2.5rem;
 }
 
 .skill_set {
@@ -162,55 +162,66 @@
     padding-left: 5vw;
     margin-top: 0;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+    align-items: center;
 }
 
 .front-pro span {
-    border: 0.8px solid;
-    border-radius: 10px;
-    font-size: 16px;
-    width: 80px;
-    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Reduced opacity by 20% from 0.5 */
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
-    height: 28px;
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(134, 127, 96, 0.3);
-    transition: box-shadow 0.3s ease;
-    vertical-align: top;
-    margin-top: 0;
 }
 
 .front-pro span:hover {
-    box-shadow: 0 0 20px rgba(179, 173, 142, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .front-pro span::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at var(--x) var(--y), rgba(0, 255, 0, 0.2), transparent 70%);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
 }
 
 .front-pro span:hover::before {
-    opacity: 1;
+    left: 100%;
 }
 
 .front-pro .t4 {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Reduced opacity by 20% from 0.5 */
 }
 
 /* Media query for mobile devices */
 @media (max-width: 640px) {
     h1 {
-        display: none; /* Hide Prakash kumar on mobile */
+        display: none;
     }
 
     .uparwala {
@@ -219,17 +230,17 @@
     }
 
     .front-ptop {
-        font-size: 10vw; /* Increased for mobile */
+        font-size: 10vw;
         padding-top: 12vh;
         padding-left: 5vw;
         align-items: flex-start;
         text-align: left;
-        gap: 0.2rem; /* Reduced gap to decrease height space */
+        gap: 0.2rem;
     }
 
     .t2 {
-        font-size: 12vw; /* Increased for mobile */
-        margin-top: -1rem; /* Increased negative margin to reduce space */
+        font-size: 12vw;
+        margin-top: -1rem;
     }
 
     .skill_set {
@@ -239,7 +250,6 @@
     }
 
     .skill-item {
-        display: inline-block;
         font-size: 0.7rem;
         padding: 0.2rem 0.6rem;
     }
@@ -248,16 +258,19 @@
         padding-left: 5vw;
         justify-content: flex-start;
         flex-wrap: wrap;
+        gap: 1rem;
     }
 
     .front-pro span {
-        width: 70px;
-        height: 26px;
-        font-size: 14px;
+        width: 100px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 16px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     }
 
     .front-pro .t4 {
-        margin-left: 0.5rem;
+        margin-left: 0;
     }
 
     .animated-star {
@@ -269,7 +282,7 @@
     }
 }
 
-/* Media query for larger screens to maintain original styling */
+/* Media query for larger screens */
 @media (min-width: 641px) {
     .uparwala {
         padding-left: 140px;
@@ -278,12 +291,12 @@
     .front-ptop {
         font-size: 50px;
         padding-left: 40px;
-        gap: 0.2rem; /* Reduced gap to decrease height space */
+        gap: 0.2rem;
     }
 
     .t2 {
         font-size: 70px;
-        margin-top: -2.5rem; /* Increased negative margin to reduce space */
+        margin-top: -2.5rem;
     }
 
     .skill_set {
@@ -302,13 +315,16 @@
     }
 
     .front-pro span {
-        width: 100px;
-        height: 30px;
-        font-size: 18px;
+        width: 160px; /* Increased width for desktop */
+        height: 44px;
+        line-height: 44px;
+        font-size: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.4); /* Reduced opacity by 20% from 0.5 */
     }
 
     .front-pro .t4 {
-        margin-left: 50px;
+        margin-left: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.4); /* Reduced opacity by 20% from 0.5 */
     }
 
     .animated-star {

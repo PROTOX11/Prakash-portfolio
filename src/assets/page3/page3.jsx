@@ -46,19 +46,26 @@ const techStack = [
 ];
 
 const certificates = [
+  // {
+  //   title: 'AWS Certified Solutions Architect',
+  //   issuer: 'Amazon Web Services',
+  //   date: 'May 2024',
+  //   image: 'https://img.icons8.com/color/96/000000/amazon-web-services.png',
+  //   link: '',
+  // },
   {
-    title: 'AWS Certified Solutions Architect',
-    issuer: 'Amazon Web Services',
-    date: 'May 2024',
-    image: 'https://img.icons8.com/color/96/000000/amazon-web-services.png',
-    link: 'https://www.credly.com/badges/aws-solutions-architect',
+    title: 'Google Cloud Skill Badge',
+    issuer: 'Google',
+    date: 'Earned Sep 2023',
+    image: 'https://img.icons8.com/color/96/000000/google-logo.png',
+    link: 'https://www.credly.com/badges/d65b2a5a-ac1b-411d-999b-b5aa00c89464/public_url',
   },
   {
-    title: 'Google Data Analytics Professional',
-    issuer: 'Google',
-    date: 'Jan 2024',
-    image: 'https://img.icons8.com/color/96/000000/google-logo.png',
-    link: 'https://www.coursera.org/account/accomplishments/certificate/google-data-analytics',
+    title: 'Introduction to Data Science course',
+    issuer: 'Cisco',
+    date: 'Earned Sep 2023',
+    image: 'https://static-00.iconduck.com/assets.00/cisco-icon-512x512-g1yuowb0.png',
+    link: 'https://www.credly.com/badges/ad2ca419-b7c6-415b-9386-85bf91284166/print',
   },
 
 ];

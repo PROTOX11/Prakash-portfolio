@@ -12,6 +12,8 @@ html {
     margin: 1rem clamp(0.25rem, 1vw, 0.5rem);
     color: black;
     text-align: center; /* Centered for better readability */
+    padding-left: 3rem; /* Increased padding for desktop view */
+    padding-right: 3rem; /* Increased padding for desktop view */
 }
 
 .aboutwala {
@@ -110,7 +112,7 @@ html {
     gap: clamp(0.625rem, 2vw, 1.25rem);
     margin-top: 2rem;
     cursor: pointer;
-    align-items: center;
+    align-items: stretch; /* Changed to stretch to allow height differences */
     padding: clamp(0.625rem, 2vw, 1.25rem);
     height: auto;
     min-height: 12rem;
@@ -122,6 +124,7 @@ html {
 
 .card-certificates {
     grid-column: 3 / 4;
+    max-height: 10rem; /* Shorter height for certificate card */
 }
 
 .card-experience {
@@ -170,6 +173,10 @@ html {
     overflow: hidden;
     word-break: break-word;
     overflow-wrap: break-word;
+}
+
+.card-certificates .card-inner {
+    padding: clamp(0.3rem, 1.5vw, 0.8rem); /* Reduced padding for certificate card to fit shorter height */
 }
 
 .card-bg {
