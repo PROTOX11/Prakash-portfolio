@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './page4.css';
-
+import { handleEmailClick } from "../Connect";
 function Page4() {
     const leftRef = useRef(null);
     const rightRef = useRef(null);
@@ -24,6 +24,10 @@ function Page4() {
         if (leftEl) observer.observe(leftEl);
         if (rightEl) observer.observe(rightEl);
     }, []);
+        const handleLinkClick = (e) => {
+            e.preventDefault(); // Prevent default <a> navigation
+            handleEmailClick();
+        };
 
     return (
         <div className="page4-container" id="last_page">
@@ -105,11 +109,11 @@ function Page4() {
                                 Let's Connect on LinkedIn
                             </a>
                         </li>
-                        <li className="connect-item">
+                        <li className="connect-item" onClick={handleEmailClick} rel="noopener noreferer">
                             <a
-                                href="mailto:prakashkr2894@gmail.com"
+                                
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                
                                 className="connect-link instagram"
                             >
                                 <span className="connect-icon" aria-hidden="true">
