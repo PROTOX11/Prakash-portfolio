@@ -14,7 +14,6 @@
     padding: 1.2rem;
     gap: 2.5rem;
     border: 1px solid #4b4b4b;
-    overflow: hidden;
     opacity: 0;
     animation: spreadBorder 2s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s; /* Smoother easing */
     z-index: 2;
@@ -43,7 +42,7 @@
     }
     50% {
         left: 40%; /* Move to between Project and Skills */
-        top: 52%; /* Subtle gravity drop */
+        top: 50%; /* Adjusted to center */
         width: 10px;
         height: 10px;
     }
@@ -106,4 +105,68 @@
     background: #f0ede5;
     color: #000000;
     transform: translateY(-2px) scale(1.06);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar-container {
+        width: clamp(202.5px, 56.7vw, 324px); /* Reduced width by additional 10% */
+        padding: 1.21rem; /* Increased padding by additional 10% */
+        height: 6.05px; /* Increased height by additional 10% */
+        gap: 1.5rem;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping */
+        scroll-behavior: smooth; /* Smooth scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+        justify-content: flex-start; /* Align links to start for scrolling */
+        position: relative; /* For ::after positioning */
+    }
+
+    .navbar-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px; /* Reduced width for subtler fade */
+        height: 100%;
+        background: linear-gradient(to left, rgba(250, 247, 239, 0.3), transparent); /* More transparent fade */
+        pointer-events: none;
+    }
+
+    .navbar-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .navbar-container {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .navbar-link {
+        min-width: clamp(70px, 12vw, 100px); /* Smaller links for mobile */
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        width: clamp(162px, 48.6vw, 243px); /* Reduced width by additional 10% */
+        padding: 0.968rem; /* Increased padding by additional 10% */
+        height: 6.05px; /* Increased height by additional 10% */
+        gap: 1rem;
+    }
+
+    .navbar-container::after {
+        width: 8px; /* Smaller width for subtler fade */
+        background: linear-gradient(to left, rgba(250, 247, 239, 0.3), transparent); /* More transparent fade */
+    }
+
+    .navbar-link {
+        min-width: clamp(60px, 10vw, 90px); /* Smaller links for smaller screens */
+        padding: 0.3rem 0.7rem;
+        font-size: 0.85rem;
+    }
 }

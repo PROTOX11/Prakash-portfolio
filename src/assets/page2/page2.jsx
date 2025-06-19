@@ -1,10 +1,97 @@
-import "./page2.css";
-import { useRevealOnScroll } from "../page2/useRevealOnScroll";
+import React, { useRef, useEffect } from 'react';
+import './page2.css';
 
-function page2({ setActiveTab }) {
-    const aboutMeRef = useRevealOnScroll();
-    const paraRef = useRevealOnScroll();
-    const btnsRef = useRevealOnScroll();
+function Page2({ setActiveTab }) {
+    const aboutMeRef = useRef(null);
+    const paraRef = useRef(null);
+    const btnsRef = useRef(null);
+    const projectCardRef = useRef(null);
+    const certCardRef = useRef(null);
+    const expCardRef = useRef(null);
+    const projectNumRef = useRef(null);
+    const certNumRef = useRef(null);
+    const expNumRef = useRef(null);
+
+    // Custom hook for reveal animation
+    const useRevealOnScroll = (ref) => {
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        } else {
+                            entry.target.classList.remove('visible');
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+
+            if (ref.current) {
+                observer.observe(ref.current);
+            }
+
+            return () => {
+                if (ref.current) {
+                    observer.unobserve(ref.current);
+                }
+            };
+        }, [ref]);
+    };
+
+    // Counter animation function
+    const animateCounter = (element, endValue, duration) => {
+        let start = 0;
+        const stepTime = Math.round(duration / endValue);
+        const timer = setInterval(() => {
+            start += 1;
+            element.textContent = start;
+            if (start >= endValue) {
+                clearInterval(timer);
+                element.textContent = endValue;
+            }
+        }, stepTime);
+    };
+
+    // Apply reveal animation to elements
+    useRevealOnScroll(aboutMeRef);
+    useRevealOnScroll(paraRef);
+    useRevealOnScroll(btnsRef);
+    useRevealOnScroll(projectCardRef);
+    useRevealOnScroll(certCardRef);
+    useRevealOnScroll(expCardRef);
+
+    // Counter animation for numbers
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const numElement = entry.target.querySelector('.number');
+                        const endValue = parseInt(numElement.getAttribute('data-value'), 10);
+                        animateCounter(numElement, endValue, 1000); // 1-second duration
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        const refs = [projectCardRef, certCardRef, expCardRef];
+        refs.forEach((ref) => {
+            if (ref.current) {
+                observer.observe(ref.current);
+            }
+        });
+
+        return () => {
+            refs.forEach((ref) => {
+                if (ref.current) {
+                    observer.unobserve(ref.current);
+                }
+            });
+        };
+    }, []);
 
     return (
         <>
@@ -14,7 +101,7 @@ function page2({ setActiveTab }) {
                     Hello, I'm Prakash Kumar — a Computer Science and Engineering student passionate about crafting scalable and efficient web and mobile applications. I thrive on learning new technologies, staying current with industry trends, and continuously sharpening my development skills. I'm actively seeking opportunities to grow, collaborate, and make a meaningful impact as a developer.
                 </p>
                 <br />
-                <div ref={btnsRef} className="aboutwala">
+                <div ref={btnsRef} className="aboutwala reveal">
                     <button
                         className="animated-button"
                         onClick={() => (window.location.href = 'https://drive.google.com/file/d/1cJrBD3UB3exmQGcG6REGQ-Ih2oYtgbd4/view?usp=drive_link')}
@@ -48,9 +135,8 @@ function page2({ setActiveTab }) {
             </div>
             <div className="grid">
                 <div
-                    data-aos="fade-right"
-                    data-aos-duration="1300"
-                    className="card card-projects"
+                    ref={projectCardRef}
+                    className="card card-projects reveal"
                     onClick={() => {
                         const section = document.getElementById("portfolio-showcase");
                         if (section) {
@@ -80,28 +166,20 @@ function page2({ setActiveTab }) {
                             </div>
                             <span
                                 className="number"
-                                data-aos="fade-up-left"
-                                data-aos-duration="1500"
-                                data-aos-anchor-placement="top-bottom"
+                                data-value="3"
                             >
-                                3
+                                0
                             </span>
                         </div>
                         <div>
                             <p
                                 className="title"
-                                data-aos="fade-up"
-                                data-aos-duration="800"
-                                data-aos-anchor-placement="top-bottom"
                             >
                                 Total Projects
                             </p>
                             <div className="footer">
                                 <p
                                     className="description"
-                                    data-aos="fade-up"
-                                    data-aos-duration="1000"
-                                    data-aos-anchor-placement="top-bottom"
                                 >
                                     Innovative web & mobile solutions crafted
                                 </p>
@@ -125,9 +203,8 @@ function page2({ setActiveTab }) {
                     </div>
                 </div>
                 <div
-                    data-aos="fade-up"
-                    data-aos-duration="1300"
-                    className="card card-certificates"
+                    ref={certCardRef}
+                    className="card card-certificates reveal"
                     onClick={() => {
                         setActiveTab('certificates');
                         setTimeout(() => {
@@ -158,28 +235,20 @@ function page2({ setActiveTab }) {
                             </div>
                             <span
                                 className="number"
-                                data-aos="fade-up-left"
-                                data-aos-duration="1500"
-                                data-aos-anchor-placement="top-bottom"
+                                data-value="4"
                             >
-                                4
+                                0
                             </span>
                         </div>
                         <div>
                             <p
                                 className="title"
-                                data-aos="fade-up"
-                                data-aos-duration="800"
-                                data-aos-anchor-placement="top-bottom"
                             >
                                 Certificates
                             </p>
                             <div className="footer">
                                 <p
                                     className="description"
-                                    data-aos="fade-up"
-                                    data-aos-duration="1000"
-                                    data-aos-anchor-placement="top-bottom"
                                 >
                                     Professional skills validated
                                 </p>
@@ -203,9 +272,8 @@ function page2({ setActiveTab }) {
                     </div>
                 </div>
                 <div
-                    data-aos="fade-left"
-                    data-aos-duration="1300"
-                    className="card card-experience"
+                    ref={expCardRef}
+                    className="card card-experience reveal"
                 >
                     <div className="card-inner">
                         <div className="card-bg"></div>
@@ -230,28 +298,20 @@ function page2({ setActiveTab }) {
                             </div>
                             <span
                                 className="number"
-                                data-aos="fade-up-left"
-                                data-aos-duration="1500"
-                                data-aos-anchor-placement="top-bottom"
+                                data-value="3"
                             >
-                                3
+                                0
                             </span>
                         </div>
                         <div>
                             <p
                                 className="title"
-                                data-aos="fade-up"
-                                data-aos-duration="800"
-                                data-aos-anchor-placement="top-bottom"
                             >
                                 Year of Experience
                             </p>
                             <div className="footer">
                                 <p
                                     className="description"
-                                    data-aos="fade-up"
-                                    data-aos-duration="1000"
-                                    data-aos-anchor-placement="top-bottom"
                                 >
                                     Continuous learning journey
                                 </p>
@@ -279,4 +339,4 @@ function page2({ setActiveTab }) {
     );
 }
 
-export default page2;
+export default Page2;

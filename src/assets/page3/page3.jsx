@@ -44,6 +44,7 @@ const techStack = [
   { name: 'Tailwind CSS', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg' },
   { name: 'Expo', icon: 'https://img.icons8.com/?size=100&id=hmieDPifBlBM&format=png&color=000000' },
 ];
+
 const certificates = [
   {
     title: 'AWS Certified Solutions Architect',
@@ -59,21 +60,9 @@ const certificates = [
     image: 'https://img.icons8.com/color/96/000000/google-logo.png',
     link: 'https://www.coursera.org/account/accomplishments/certificate/google-data-analytics',
   },
-  {
-    title: 'React Developer',
-    issuer: 'Meta',
-    date: 'Aug 2023',
-    image: 'https://img.icons8.com/color/96/000000/react-native.png',
-    link: 'https://www.coursera.org/account/accomplishments/certificate/meta-react',
-  },
-  {
-    title: 'React Developer',
-    issuer: 'Meta',
-    date: 'Aug 2023',
-    image: 'https://img.icons8.com/color/96/000000/react-native.png',
-    link: 'https://www.coursera.org/account/accomplishments/certificate/meta-react',
-  },
+
 ];
+
 function Page3({ activeTab, setActiveTab }) {
   // State to manage the transition animation
   const [fade, setFade] = useState(true);
@@ -109,6 +98,34 @@ function Page3({ activeTab, setActiveTab }) {
       });
     };
   }, []);
+
+  // Intersection Observer for project card animations
+  useEffect(() => {
+    const projectCards = document.querySelectorAll('.project-card');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible'); // Remove visible class when out of viewport
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the card is visible
+    );
+
+    projectCards.forEach((card) => {
+      observer.observe(card);
+    });
+
+    return () => {
+      projectCards.forEach((card) => {
+        observer.unobserve(card);
+      });
+    };
+  }, [activeTab]); // Re-run when activeTab changes to re-observe cards
 
   return (
     <div className="page3-container">
@@ -151,9 +168,9 @@ function Page3({ activeTab, setActiveTab }) {
                 <p className="project-description">{project.description}</p>
                 <div className="project-links">
                   <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="live-demo-link">
-                    Live Demo &#x2197;
+                    Live Demo ↗
                   </a>
-                  <button className="details-button">Details &rarr;</button>
+                  <button className="details-button">Details →</button>
                 </div>
               </div>
             ))}

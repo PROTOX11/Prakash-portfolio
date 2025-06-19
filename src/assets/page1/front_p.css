@@ -14,14 +14,12 @@
     height: 100vh;
     overflow: hidden;
     z-index: -1;
-    /* Behind content */
 }
 
 /* Animated star images */
 .animated-star {
     position: absolute;
-    width: 30px;
-    /* Reduced size */
+    width: 20px;
     height: auto;
     opacity: 0.7;
     pointer-events: none;
@@ -29,7 +27,6 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     transform-origin: center center;
-
 }
 
 /* Different animation durations and delays for each image */
@@ -74,7 +71,6 @@
         transform: translate(0, 0);
         opacity: 0.7;
     }
-
     100% {
         transform: translate(-120vw, 120vh);
         opacity: 0.7;
@@ -82,42 +78,46 @@
 }
 
 .uparwala {
-    padding-left: 140px;
-}
-/* Rest of your CSS remains unchanged */
-.front-ptop {
-    font-size: 50px;
-    padding-top: 100px;
-    padding-left: 40px;
+    padding-left: 10vw;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Rest of your CSS remains unchanged */
+.front-ptop {
+    font-size: 6vw;
+    padding-top: 10vh;
+    padding-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem; /* Reduced gap to decrease height space */
 }
 
 .t2 {
-    font-size: 70px;
-    margin-top: -50px;
+    font-size: 8vw;
+    margin-top: -2.5rem; /* Increased negative margin to reduce space */
 }
 
 .skill_set {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 0.5rem;
     justify-content: flex-start;
-    padding: 20px;
-    padding-left: 40px;
-    margin-top: -30px;
+    padding: 2rem 5vw;
+    margin-top: -1.5rem;
 }
 
 .skill-item {
     display: inline-block;
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 0.8rem;
     border-radius: 9999px;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(138, 138, 138, 0.5);
     color: #444444;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s;
@@ -135,7 +135,7 @@
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
-    clip-path: inset(0.5rem 1rem);
+    clip-path: inset(0.3rem 0.8rem);
 }
 
 .skill-item:hover::before {
@@ -158,26 +158,21 @@
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-@media (max-width: 640px) {
-    .skill-item {
-        display: none;
-    }
-}
-
 .front-pro {
-    padding-left: 40px;
+    padding-left: 5vw;
     margin-top: 0;
+    display: flex;
+    gap: 1rem;
 }
 
 .front-pro span {
     border: 0.8px solid;
-    gap: 5px;
     border-radius: 10px;
-    font-size: 18px;
-    width: 100px;
+    font-size: 16px;
+    width: 80px;
     justify-content: center;
     text-align: center;
-    height: 30px;
+    height: 28px;
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -209,5 +204,124 @@
 }
 
 .front-pro .t4 {
-    margin-left: 50px;
+    margin-left: 1rem;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 640px) {
+    h1 {
+        display: none; /* Hide Prakash kumar on mobile */
+    }
+
+    .uparwala {
+        padding-left: 5vw;
+        align-items: flex-start;
+    }
+
+    .front-ptop {
+        font-size: 10vw; /* Increased for mobile */
+        padding-top: 12vh;
+        padding-left: 5vw;
+        align-items: flex-start;
+        text-align: left;
+        gap: 0.2rem; /* Reduced gap to decrease height space */
+    }
+
+    .t2 {
+        font-size: 12vw; /* Increased for mobile */
+        margin-top: -1rem; /* Increased negative margin to reduce space */
+    }
+
+    .skill_set {
+        justify-content: flex-start;
+        padding: 1rem 5vw;
+        gap: 0.5rem;
+    }
+
+    .skill-item {
+        display: inline-block;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .front-pro {
+        padding-left: 5vw;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .front-pro span {
+        width: 70px;
+        height: 26px;
+        font-size: 14px;
+    }
+
+    .front-pro .t4 {
+        margin-left: 0.5rem;
+    }
+
+    .animated-star {
+        width: 15px;
+    }
+
+    .circles {
+        opacity: 0.5;
+    }
+}
+
+/* Media query for larger screens to maintain original styling */
+@media (min-width: 641px) {
+    .uparwala {
+        padding-left: 140px;
+    }
+
+    .front-ptop {
+        font-size: 50px;
+        padding-left: 40px;
+        gap: 0.2rem; /* Reduced gap to decrease height space */
+    }
+
+    .t2 {
+        font-size: 70px;
+        margin-top: -2.5rem; /* Increased negative margin to reduce space */
+    }
+
+    .skill_set {
+        padding-left: 40px;
+        margin-top: -30px;
+        gap: 0.75rem;
+    }
+
+    .skill-item {
+        font-size: 0.875rem;
+        padding: 0.3rem 1rem;
+    }
+
+    .front-pro {
+        padding-left: 40px;
+    }
+
+    .front-pro span {
+        width: 100px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .front-pro .t4 {
+        margin-left: 50px;
+    }
+
+    .animated-star {
+        width: 30px;
+    }
+
+    .circles {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 25px;
+    padding-left: 10px;
+    padding-top: 10px;
 }

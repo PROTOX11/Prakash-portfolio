@@ -1,18 +1,20 @@
 .social-btns-container {
     display: flex;
-    gap: 1.5rem;
-    padding-left: 180px;
-    margin: 2rem 0;
+    gap: 1rem;
+    padding-left: 10vw;
+    margin: 1.5rem 0;
+    align-items: center;
 }
 
 .social-btn {
     display: flex;
-    gap: 0.7rem;
+    align-items: center;
+    gap: 0.5rem;
     background: #d4cdba;
     color: #fff;
     border-radius: 2rem;
-    padding: 0.8rem 1.2rem;
-    font-size: 0.4rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.875rem;
     font-weight: 600;
     text-decoration: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -21,7 +23,7 @@
 }
 
 .social-btn .icon {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .social-btn.github:hover {
@@ -48,4 +50,42 @@
     background: #be8e89;
     color: #fff;
     transform: translateY(-2px) scale(1.05);
+}
+
+/* Media query for mobile devices */
+@media (max-width: 640px) {
+    .social-btns-container {
+        padding-left: 10vw; /* Increased padding for more space from left edge */
+        gap: 0.5rem;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+
+    .social-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .social-btn .icon {
+        font-size: 1rem;
+    }
+}
+
+/* Media query for larger screens to maintain original styling */
+@media (min-width: 641px) {
+    .social-btns-container {
+        padding-left: 180px;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .social-btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.875rem;
+    }
+
+    .social-btn .icon {
+        font-size: 1.5rem;
+    }
 }

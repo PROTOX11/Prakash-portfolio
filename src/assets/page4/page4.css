@@ -40,6 +40,18 @@
     }
 }
 
+@media (max-width: 768px) {
+    .page4-container {
+        padding: 2rem clamp(1rem, 5vw, 2rem); /* Added symmetric padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .page4-container {
+        padding: 1.5rem clamp(0.5rem, 3vw, 1rem); /* Added symmetric padding for smaller mobile screens */
+    }
+}
+
 .contact-form-section {
     background: rgba(230, 220, 180, 0.3);
     border-radius: 12px;
@@ -170,16 +182,19 @@
     width: 24px;
     text-align: center;
 }
+
 .slide-in-left {
     opacity: 0;
     transform: translateX(-80px);
     transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
 }
+
 .slide-in-right {
     opacity: 0;
     transform: translateX(80px);
     transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
 }
+
 .slide-in-visible {
     opacity: 1;
     transform: translateX(0);

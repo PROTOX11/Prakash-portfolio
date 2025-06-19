@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './page4.css';
 import { handleEmailClick } from "../Connect";
+
 function Page4() {
     const leftRef = useRef(null);
     const rightRef = useRef(null);
@@ -14,7 +15,8 @@ function Page4() {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('slide-in-visible');
-                        observer.unobserve(entry.target);
+                    } else {
+                        entry.target.classList.remove('slide-in-visible');
                     }
                 });
             },
@@ -23,11 +25,19 @@ function Page4() {
 
         if (leftEl) observer.observe(leftEl);
         if (rightEl) observer.observe(rightEl);
+
+        // Cleanup observer on component unmount
+        return () => {
+            if (leftEl) observer.unobserve(leftEl);
+            if (rightEl) observer.unobserve(rightEl);
+        };
     }, []);
+
     const handleLinkClick = (e) => {
         e.preventDefault(); // Prevent default <a> navigation
         handleEmailClick();
     };
+
     const [result, setResult] = React.useState("");
 
     const onSubmit = async (event) => {
@@ -134,11 +144,9 @@ function Page4() {
                                 Let's Connect on LinkedIn
                             </a>
                         </li>
-                        <li className="connect-item" onClick={handleEmailClick} rel="noopener noreferer">
+                        <li className="connect-item" onClick={handleLinkClick} rel="noopener noreferrer">
                             <a
-
                                 target="_blank"
-
                                 className="connect-link instagram"
                             >
                                 <span className="connect-icon" aria-hidden="true">
