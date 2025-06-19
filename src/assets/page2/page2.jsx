@@ -11,11 +11,27 @@ function page2() {
             <div className="sec_page">
                 <span ref={aboutMeRef} className="about-me reveal">About me</span>
                 <p ref={paraRef} className="reveal" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aliquam doloribus autem adipisci laboriosam quas, accusamus sint suscipit earum totam veniam voluptatem eius laborum! Nihil officia at labore est cxvjbckjdsgfkdhsgfkjdhsgfkjdhsfkjdhskjfhdcnxbkjhgzmaiores!</p>
-                <div ref={btnsRef} className="aboutwala reveal">
-                    <button className="button">Download CV</button>
-                    <button className="button">View Projects</button>
+                <br></br>
+                <div ref={btnsRef} className="aboutwala">
+                    <button className="animated-button">
+                        <div className="btn-cells">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <span className="btn-content">Download CV</span>
+                    </button>
+                    <button className="animated-button">
+                        <div className="btn-cells">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <span className="btn-content">View Projects</span>
+                    </button>
                 </div>
-
             </div>
             <div className="grid">
                 <div data-aos="fade-right" data-aos-duration="1300" className="card">
@@ -223,7 +239,6 @@ function page2() {
                     </div>
                 </div>
             </div>
-            <div>Project ShowCase</div>
         </>
     );
 }
