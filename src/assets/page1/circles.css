@@ -2,13 +2,13 @@
 
 /* Variables */
 :root {
-    --darkColor: #212121;
-    --smDotsWidth: 13px;
-    --bgDotsWidth: 15px;
-    --bgCirclesSpeed: 45s;
-    --smCirclesSpeed: 20s;
-    --bgDotsSpeed: 5s;
-    --smDotsSpeed: 2s;
+    --darkColor: #887f64;
+    --smDotsWidth: 25px;
+    --bgDotsWidth: 30px;
+    --bgCirclesSpeed: 65s;
+    --smCirclesSpeed: 35s;
+    --bgDotsSpeed: 10s;
+    --smDotsSpeed: 8s;
 }
 
 /* Circles container */

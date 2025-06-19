@@ -63,8 +63,18 @@ function Front_p() {
                     <span className='skill-item'>Other Skill</span>
                 </div>
                 <div className='front-pro'>
-                    <span className='t3'>Projects</span>
-                    <span className='t4'>Contact</span>
+                    <span className='t3' onClick={() => {
+                        const section = document.getElementById("portfolio-showcase");
+                        if (section) {
+                            section.scrollIntoView({ behavior: "smooth" });
+                        }
+                    }}>Projects</span>
+                    <span className='t4' onClick={() => {
+                        const section = document.getElementById("last_page");
+                        if (section) {
+                            section.scrollIntoView({ behavior: "smooth" });
+                        }
+                    }}>Contact</span>
                 </div>
             </div>
         </div>

@@ -1,20 +1,20 @@
 import "./page2.css";
 import { useRevealOnScroll } from "../page2/useRevealOnScroll"
 
-function page2() {
+function page2({ setActiveTab }) {
     const aboutMeRef = useRevealOnScroll();
     const paraRef = useRevealOnScroll();
     const btnsRef = useRevealOnScroll();
 
     return (
         <>
-            <div className="sec_page">
+            <div className="sec_page" id="aboutw">
                 <span ref={aboutMeRef} className="about-me reveal">About me</span>
                 <p ref={paraRef} className="reveal" >Hello, I'm Prakash Kumar — a Computer Science and Engineering student passionate about crafting scalable and efficient web and mobile applications. I thrive on learning new technologies, staying current with industry trends, and continuously sharpening my development skills. I'm actively seeking opportunities to grow, collaborate, and make a meaningful impact as a developer.</p>
                 <br></br>
                 <div ref={btnsRef} className="aboutwala">
-                    <button className="animated-button" href="https://drive.google.com/file/d/1cJrBD3UB3exmQGcG6REGQ-Ih2oYtgbd4/view?usp=drive_link" >
-                        <div className="btn-cells">
+                    <button className="animated-button" onClick={() => (window.location.href = 'https://drive.google.com/file/d/1cJrBD3UB3exmQGcG6REGQ-Ih2oYtgbd4/view?usp=drive_link')} >
+                        <div className="btn-cells" >
                             <span></span><span></span><span></span><span></span><span></span>
                             <span></span><span></span><span></span><span></span><span></span>
                             <span></span><span></span><span></span><span></span><span></span>
@@ -22,7 +22,12 @@ function page2() {
                         </div>
                         <span className="btn-content">Download CV</span>
                     </button>
-                    <button className="animated-button">
+                    <button className="animated-button" onClick={() => {
+                        const section = document.getElementById("portfolio-showcase");
+                        if (section) {
+                            section.scrollIntoView({ behavior: "smooth" });
+                        }
+                    }}>
                         <div className="btn-cells">
                             <span></span><span></span><span></span><span></span><span></span>
                             <span></span><span></span><span></span><span></span><span></span>
@@ -34,7 +39,12 @@ function page2() {
                 </div>
             </div>
             <div className="grid">
-                <div data-aos="fade-right" data-aos-duration="1300" className="card">
+                <div data-aos="fade-right" data-aos-duration="1300" className="card" onClick={() => {
+                    const section = document.getElementById("portfolio-showcase");
+                    if (section) {
+                        section.scrollIntoView({ behavior: "smooth" });
+                    }
+                }}>
                     <div className="card-inner">
                         <div className="card-bg"></div>
                         <div className="header">
@@ -61,7 +71,7 @@ function page2() {
                                 data-aos-duration="1500"
                                 data-aos-anchor-placement="top-bottom"
                             >
-                                4
+                                3
                             </span>
                         </div>
                         <div>
@@ -102,7 +112,13 @@ function page2() {
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="1300" className="card">
+                <div data-aos="fade-up" data-aos-duration="1300" className="card" onClick={() => {
+                    setActiveTab('certificates');
+                    setTimeout(() => {
+                        const section = document.getElementById("certificates-section");
+                        if (section) section.scrollIntoView({ behavior: "smooth" });
+                    }, 100);
+                }}>
                     <div className="card-inner">
                         <div className="card-bg"></div>
                         <div className="header">
@@ -129,7 +145,7 @@ function page2() {
                                 data-aos-duration="1500"
                                 data-aos-anchor-placement="top-bottom"
                             >
-                                3
+                                4
                             </span>
                         </div>
                         <div>
@@ -198,7 +214,7 @@ function page2() {
                                 data-aos-duration="1500"
                                 data-aos-anchor-placement="top-bottom"
                             >
-                                2
+                                1
                             </span>
                         </div>
                         <div>

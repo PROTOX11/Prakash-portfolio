@@ -11,6 +11,14 @@ html, body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+  /* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
 }
 
 body {

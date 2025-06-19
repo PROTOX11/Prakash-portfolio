@@ -1,3 +1,9 @@
+/* Enable smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Existing styles */
 .page3-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -12,7 +18,7 @@
 .page3-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #a67c00;
+    color: #c4b88f;
     text-align: center;
     margin-bottom: 0.5rem;
 }
@@ -21,7 +27,7 @@
     font-size: 1.1rem;
     text-align: center;
     margin-bottom: 2rem;
-    color: #b8a96c;
+    color: #766f50;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -33,13 +39,11 @@
     gap: 1rem;
     margin-bottom: 2rem;
     width: fit-content;
-    /* or remove width entirely */
     background: rgba(230, 220, 180, 0.4);
     border-radius: 30px;
     padding: 0.5rem 1rem;
     box-shadow: inset 0 0 10px #d1cfc7aa;
     margin-left: auto;
-    /* Ensures container is centered */
     margin-right: auto;
 }
 
@@ -63,13 +67,25 @@
 }
 
 .tab-button.active {
-    background: linear-gradient(90deg, #a67c00, #d1b000);
-    color: white;
-    box-shadow: 0 0 15px #d1b000;
+    background: linear-gradient(90deg, #dfd2ac, #d5d1bf);
+    color: rgb(113, 112, 102);
+    box-shadow: 0 0 15px #8b8567;
 }
 
 .tab-content {
     min-height: 300px;
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tab-content.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab-content.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .projects-grid {
@@ -84,16 +100,16 @@
     border-radius: 12px;
     padding: 1rem;
     width: 280px;
-    box-shadow: 0 0 15px #d1cfc7aa;
+    box-shadow: 0 0 15px #a7a5a1aa;
     display: flex;
     flex-direction: column;
-    color: #faf7ef;
+    color: #9d9a92;
     transition: transform 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 25px #a67c00;
+    box-shadow: 0 0 25px #d2cfc1;
 }
 
 .project-image {
@@ -108,14 +124,14 @@
     font-weight: 700;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #a67c00;
+    color: #afa37d;
 }
 
 .project-description {
     font-size: 0.9rem;
     flex-grow: 1;
     margin-bottom: 1rem;
-    color: #b8a96c;
+    color: #beb594;
 }
 
 .project-links {
@@ -125,7 +141,7 @@
 }
 
 .live-demo-link {
-    color: #a67c00;
+    color: #b9a66c;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
@@ -136,7 +152,7 @@
 }
 
 .details-button {
-    background: #d1b000;
+    background: #877f55;
     border: none;
     color: white;
     padding: 0.4rem 0.8rem;
@@ -148,7 +164,7 @@
 }
 
 .details-button:hover {
-    background: #a67c00;
+    background: #b69f64;
 }
 
 .certificates-placeholder {
@@ -163,13 +179,15 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 .tech-card {
     background: rgba(230, 220, 180, 0.3);
     border-radius: 12px;
-    width: 120px;
-    height: 140px;
+    width: 100px;
+    height: 120px;
     box-shadow: 0 0 15px #d1cfc7aa;
     display: flex;
     flex-direction: column;
@@ -183,7 +201,7 @@
 
 .tech-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 25px #a67c00;
+    box-shadow: 0 0 25px #6c5f36;
 }
 
 .tech-icon {
@@ -198,4 +216,62 @@
     font-size: 1rem;
     text-align: center;
     color: #a67c00;
+}
+
+.certificates-grid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.certificate-card {
+    background: rgba(230, 220, 180, 0.3);
+    border-radius: 12px;
+    padding: 1rem;
+    width: 180px;
+    height: 260px;
+    box-shadow: 0 0 15px #a7a5a1aa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #9d9a92;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 0 25px #d2cfc1;
+}
+
+.certificate-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.certificate-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #afa37d;
+    margin-bottom: 0.3rem;
+    text-align: center;
+}
+
+.certificate-issuer {
+    font-size: 0.9rem;
+    color: #beb594;
+    margin-bottom: 0.2rem;
+    text-align: center;
+}
+
+.certificate-date {
+    font-size: 0.85rem;
+    color: #b8a96c;
+    text-align: center;
 }

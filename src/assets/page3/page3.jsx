@@ -1,48 +1,118 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './page3.css';
 
 const projects = [
   {
-    title: 'IntervueAI',
-    description: 'Real-time mock interviews with AI, no forms or clicks just natural, ...',
+    title: 'MedtrackFit',
+    description: 'MedTrackFit: Smart, AI-powered health tracking for personalized wellness insights....',
     image: 'https://user-images.githubusercontent.com/placeholder/intervueai.png',
     liveDemo: 'https://intervueai.example.com',
   },
   {
-    title: 'Blendy',
-    description: 'A social app where you can connect in real-time, log in with one click, ...',
+    title: 'Vartalap',
+    description: 'A social app for real-time connection and effortless interaction., ...',
     image: 'https://user-images.githubusercontent.com/placeholder/blendy.png',
     liveDemo: 'https://blendy.example.com',
   },
   {
-    title: 'WATCHit',
-    description: 'A video streaming app made for easy, personal entertainment and...',
+    title: 'We Help Together',
+    description: 'We Help Together is a donation platform uniting communities to support those in need...',
     image: 'https://user-images.githubusercontent.com/placeholder/watchit.png',
     liveDemo: 'https://watchit.example.com',
   },
 ];
 
 const techStack = [
+  { name: 'Java', icon: 'https://img.icons8.com/?size=100&id=2572&format=png&color=000000' },
+  { name: 'Spring', icon: 'https://img.icons8.com/?size=100&id=90519&format=png&color=000000' },
+  { name: 'PostgreSQL', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968342.png' },
+  { name: 'MongoDB', icon: 'https://img.icons8.com/?size=100&id=8rKdRqZFLurS&format=png&color=000000' },
   { name: 'HTML', icon: 'https://cdn-icons-png.flaticon.com/512/732/732212.png' },
   { name: 'CSS', icon: 'https://cdn-icons-png.flaticon.com/512/732/732190.png' },
   { name: 'JavaScript', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png' },
-  { name: 'Tailwind CSS', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg' },
-  { name: 'Express JS', icon: 'https://cdn-icons-png.flaticon.com/512/919/919825.png' },
-  { name: 'Node JS', icon: 'https://cdn-icons-png.flaticon.com/512/919/919825.png' },
   { name: 'React + Native', icon: 'https://cdn-icons-png.flaticon.com/512/1126/1126012.png' },
-  { name: 'MongoDB', icon: 'https://cdn-icons-png.flaticon.com/512/919/919836.png' },
-  { name: 'JWT', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968672.png' },
-  { name: 'PostgreSQL', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968342.png' },
-  { name: 'TypeScript', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968381.png' },
   { name: 'Docker', icon: 'https://cdn-icons-png.flaticon.com/512/919/919853.png' },
+  { name: 'Git', icon: 'https://img.icons8.com/?size=100&id=38388&format=png&color=000000' },
+  { name: 'Postman', icon: 'https://img.icons8.com/?size=100&id=EPbEfEa7o8CB&format=png&color=000000' },
+  { name: 'Jira', icon: 'https://img.icons8.com/?size=100&id=oROcPah5ues6&format=png&color=000000' },
+  { name: 'AWS', icon: 'https://img.icons8.com/?size=100&id=33039&format=png&color=000000' },
+  { name: 'GCP', icon: 'https://img.icons8.com/?size=100&id=20766&format=png&color=000000' },
+  { name: 'JWT', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968672.png' },
+  { name: 'Node JS', icon: 'https://cdn-icons-png.flaticon.com/512/919/919825.png' },
+  { name: 'Express JS', icon: 'https://cdn-icons-png.flaticon.com/512/919/919825.png' },
+  { name: 'TypeScript', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968381.png' },
+  { name: 'Tailwind CSS', icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg' },
+  { name: 'Expo', icon: 'https://img.icons8.com/?size=100&id=hmieDPifBlBM&format=png&color=000000' },
 ];
+const certificates = [
+  {
+    title: 'AWS Certified Solutions Architect',
+    issuer: 'Amazon Web Services',
+    date: 'May 2024',
+    image: 'https://img.icons8.com/color/96/000000/amazon-web-services.png',
+    link: 'https://www.credly.com/badges/aws-solutions-architect',
+  },
+  {
+    title: 'Google Data Analytics Professional',
+    issuer: 'Google',
+    date: 'Jan 2024',
+    image: 'https://img.icons8.com/color/96/000000/google-logo.png',
+    link: 'https://www.coursera.org/account/accomplishments/certificate/google-data-analytics',
+  },
+  {
+    title: 'React Developer',
+    issuer: 'Meta',
+    date: 'Aug 2023',
+    image: 'https://img.icons8.com/color/96/000000/react-native.png',
+    link: 'https://www.coursera.org/account/accomplishments/certificate/meta-react',
+  },
+  {
+    title: 'React Developer',
+    issuer: 'Meta',
+    date: 'Aug 2023',
+    image: 'https://img.icons8.com/color/96/000000/react-native.png',
+    link: 'https://www.coursera.org/account/accomplishments/certificate/meta-react',
+  },
+];
+function Page3({ activeTab, setActiveTab }) {
+  // State to manage the transition animation
+  const [fade, setFade] = useState(true);
 
-function Page3() {
-  const [activeTab, setActiveTab] = useState('projects');
+  // Handle tab change with fade effect
+  const handleTabChange = (tab) => {
+    setFade(false); // Start fade out
+    setTimeout(() => {
+      setActiveTab(tab); // Change tab
+      setFade(true); // Fade in new content
+    }, 300); // Match CSS transition duration
+  };
+
+  // Smooth scrolling for anchor links
+  useEffect(() => {
+    const handleSmoothScroll = (e) => {
+      e.preventDefault();
+      const targetId = e.target.getAttribute('href')?.substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach((link) => {
+      link.addEventListener('click', handleSmoothScroll);
+    });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener('click', handleSmoothScroll);
+      });
+    };
+  }, []);
 
   return (
     <div className="page3-container">
-      <h1 className="page3-title">Portfolio Showcase</h1>
+      <h1 className="page3-title" id="portfolio-showcase">Portfolio Showcase</h1>
       <p className="page3-subtitle">
         Explore my journey through projects, certifications, and technical expertise. Each section represents a milestone in my continuous learning path.
       </p>
@@ -50,28 +120,28 @@ function Page3() {
       <div className="tabs">
         <button
           className={`tab-button ${activeTab === 'projects' ? 'active' : ''}`}
-          onClick={() => setActiveTab('projects')}
+          onClick={() => handleTabChange('projects')}
           aria-label="Projects Tab"
         >
           {'<>'} Projects
         </button>
         <button
           className={`tab-button ${activeTab === 'certificates' ? 'active' : ''}`}
-          onClick={() => setActiveTab('certificates')}
+          onClick={() => handleTabChange('certificates')}
           aria-label="Certificates Tab"
         >
-          &#x1F396; Certificates
+          🎖 Certificates
         </button>
         <button
           className={`tab-button ${activeTab === 'techstack' ? 'active' : ''}`}
-          onClick={() => setActiveTab('techstack')}
+          onClick={() => handleTabChange('techstack')}
           aria-label="Tech Stack Tab"
         >
-          &#x269B; Tech Stack
+          ⚛ Tech Stack
         </button>
       </div>
 
-      <div className="tab-content">
+      <div className={`tab-content ${fade ? 'fade-in' : 'fade-out'}`}>
         {activeTab === 'projects' && (
           <div className="projects-grid">
             {projects.map((project) => (
@@ -91,13 +161,28 @@ function Page3() {
         )}
 
         {activeTab === 'certificates' && (
-          <div className="certificates-placeholder">
-            <p>Certificates content coming soon...</p>
+          <div id='certificates-section' className="certificates-grid">
+            {certificates.map((cert) => (
+              <a
+                key={cert.title}
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="certificate-card"
+              >
+                <img src={cert.image} alt={cert.title} className="certificate-image" />
+                <div className="certificate-info">
+                  <h4 className="certificate-title">{cert.title}</h4>
+                  <p className="certificate-issuer">{cert.issuer}</p>
+                  <p className="certificate-date">{cert.date}</p>
+                </div>
+              </a>
+            ))}
           </div>
         )}
 
         {activeTab === 'techstack' && (
-          <div className="techstack-grid">
+          <div id="techstack-section" className="techstack-grid">
             {techStack.map((tech) => (
               <div key={tech.name} className="tech-card">
                 <img src={tech.icon} alt={tech.name} className="tech-icon" />
