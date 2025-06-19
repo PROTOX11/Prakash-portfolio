@@ -10,10 +10,10 @@ function page2() {
         <>
             <div className="sec_page">
                 <span ref={aboutMeRef} className="about-me reveal">About me</span>
-                <p ref={paraRef} className="reveal" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aliquam doloribus autem adipisci laboriosam quas, accusamus sint suscipit earum totam veniam voluptatem eius laborum! Nihil officia at labore est cxvjbckjdsgfkdhsgfkjdhsgfkjdhsfkjdhskjfhdcnxbkjhgzmaiores!</p>
+                <p ref={paraRef} className="reveal" >Hello, I'm Prakash Kumar — a Computer Science and Engineering student passionate about crafting scalable and efficient web and mobile applications. I thrive on learning new technologies, staying current with industry trends, and continuously sharpening my development skills. I'm actively seeking opportunities to grow, collaborate, and make a meaningful impact as a developer.</p>
                 <br></br>
                 <div ref={btnsRef} className="aboutwala">
-                    <button className="animated-button">
+                    <button className="animated-button" href="https://drive.google.com/file/d/1cJrBD3UB3exmQGcG6REGQ-Ih2oYtgbd4/view?usp=drive_link" >
                         <div className="btn-cells">
                             <span></span><span></span><span></span><span></span><span></span>
                             <span></span><span></span><span></span><span></span><span></span>

@@ -1,7 +1,7 @@
 .social-btns-container {
     display: flex;
     gap: 1.5rem;
-    padding-left: 40px;
+    padding-left: 180px;
     margin: 2rem 0;
 }
 
@@ -11,7 +11,7 @@
     background: #d4cdba;
     color: #fff;
     border-radius: 2rem;
-    padding: 0.6rem 0.8rem;
+    padding: 0.8rem 1.2rem;
     font-size: 0.4rem;
     font-weight: 600;
     text-decoration: none;

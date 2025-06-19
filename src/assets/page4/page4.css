@@ -4,9 +4,9 @@
     padding: 2rem 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #faf7ef;
-    background: radial-gradient(circle at center, #fefcf7, #f9f7f0);
+    background: transparent;
     border-radius: 12px;
-    box-shadow: 0 0 30px #d1cfc7aa;
+    box-shadow: none;
 }
 
 .page4-title {

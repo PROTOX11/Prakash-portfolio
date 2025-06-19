@@ -1,0 +1,189 @@
+/* Responsive styles for Android and tablet devices */
+
+/* Android small devices (360px to 480px) */
+@media (max-width: 480px) {
+  body, html {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .front-ptop {
+    font-size: 30px;
+    padding-top: 60px;
+    padding-left: 20px;
+  }
+
+  .t2 {
+    font-size: 40px;
+    margin-top: -30px;
+  }
+
+  .skill_set {
+    padding-left: 20px;
+    gap: 0.5rem;
+  }
+
+  .skill-item {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.8rem;
+  }
+
+  .sec_page p {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+  }
+
+  .aboutwala {
+    flex-direction: column;
+    padding-left: 20px;
+  }
+
+  .card-inner {
+    max-width: 100%;
+    min-width: auto;
+    max-height: none;
+    min-height: auto;
+  }
+
+  /* Navbar adjustments */
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-link {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  /* Middlepart social buttons */
+  .social-btns-container {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .social-btn {
+    padding: 8px;
+    font-size: 18px;
+  }
+
+  /* Page3 tabs */
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab-button {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .techstack-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets (min-width: 481px and max-width: 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body, html {
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .front-ptop {
+    font-size: 40px;
+    padding-top: 80px;
+    padding-left: 30px;
+  }
+
+  .t2 {
+    font-size: 50px;
+    margin-top: -40px;
+  }
+
+  .skill_set {
+    padding-left: 30px;
+    gap: 0.6rem;
+  }
+
+  .skill-item {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.9rem;
+  }
+
+  .sec_page p {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 18px;
+  }
+
+  .aboutwala {
+    flex-direction: row;
+    padding-left: 30px;
+  }
+
+  .card-inner {
+    max-width: 320px;
+    min-width: 220px;
+    max-height: 260px;
+    min-height: 180px;
+  }
+
+  /* Navbar adjustments */
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .navbar-link {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  /* Middlepart social buttons */
+  .social-btns-container {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .social-btn {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  /* Page3 tabs */
+  .tabs {
+    flex-direction: row;
+  }
+
+  .tab-button {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .techstack-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Preserve 16:9 aspect ratio containers if any */
+/* Example: */
+.aspect-ratio-16-9 {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+

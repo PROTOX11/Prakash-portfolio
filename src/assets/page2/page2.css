@@ -1,11 +1,12 @@
 .sec_page {
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 .sec_page p {
     font-size: 20px;
     padding-left: 200px;
     padding-right: 200px;
+    color: #473d1f;
 }
 
 .aboutwala {
@@ -19,9 +20,10 @@
 
 .about-me {
     display: flex;
-    font-size: 40px;
+    font-size: 50px;
     justify-content: center;
     align-items: center;
+    color: #c2ab6c;
 }
 
 :root {
@@ -100,7 +102,7 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+    gap: 0.9rem;
     margin-top: 4rem;
     cursor: pointer;
     align-items: center;
