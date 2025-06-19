@@ -172,7 +172,7 @@
 .front-pro span {
     border: 0.8px solid;
     gap: 5px;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 18px;
     width: 100px;
     justify-content: center;
@@ -181,7 +181,7 @@
     position: relative;
     display: inline-block;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(105, 105, 105, 0.3);
+    box-shadow: 0 0 10px rgba(134, 127, 96, 0.3);
     transition: box-shadow 0.3s ease;
     vertical-align: top;
     margin-top: 0;

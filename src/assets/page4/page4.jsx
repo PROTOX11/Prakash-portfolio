@@ -24,10 +24,34 @@ function Page4() {
         if (leftEl) observer.observe(leftEl);
         if (rightEl) observer.observe(rightEl);
     }, []);
-        const handleLinkClick = (e) => {
-            e.preventDefault(); // Prevent default <a> navigation
-            handleEmailClick();
-        };
+    const handleLinkClick = (e) => {
+        e.preventDefault(); // Prevent default <a> navigation
+        handleEmailClick();
+    };
+    const [result, setResult] = React.useState("");
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target);
+
+        formData.append("access_key", "127d052a-0403-4746-a5a1-c0ab5ea44e85");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            event.target.reset();
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+        }
+    };
 
     return (
         <div className="page4-container" id="last_page">
@@ -47,7 +71,8 @@ function Page4() {
                     </p>
                     <form
                         className="contact-form"
-                        onSubmit={e => e.preventDefault()}
+                        onSubmit={onSubmit}
+                        method='POST'
                     >
                         <label htmlFor="name" className="sr-only">
                             Your Name
@@ -111,9 +136,9 @@ function Page4() {
                         </li>
                         <li className="connect-item" onClick={handleEmailClick} rel="noopener noreferer">
                             <a
-                                
+
                                 target="_blank"
-                                
+
                                 className="connect-link instagram"
                             >
                                 <span className="connect-icon" aria-hidden="true">

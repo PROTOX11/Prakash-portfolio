@@ -102,7 +102,7 @@
 .grid {
     display: grid;
     /* 5-column grid with minimum width matching card-inner */
-    grid-template-columns: repeat(5, minmax(120px, 1fr));
+    grid-template-columns:  0.5fr 1.5fr 1.5fr 1.5fr 0.5fr;
     gap: 20px;
     margin-top: 4rem;
     cursor: pointer;
@@ -110,7 +110,7 @@
     overflow: hidden;
     padding: 20px;
     /* Remove fixed height to allow natural sizing */
-    /* height: 300px; */
+    height: 300px;
 }
 
 .card-projects {
@@ -154,7 +154,7 @@
     justify-content: space-between;
     height: 100%; /* Use full height of card */
     width: 100%;
-    max-width: 200px; /* Consistent max width */
+    max-width: 250px; /* Consistent max width */
     min-width: 120px;
     /* Remove gap to avoid extra spacing */
     /* gap: 10px; */
