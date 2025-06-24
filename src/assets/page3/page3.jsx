@@ -18,7 +18,7 @@ const projects = [
     title: 'We Help Together',
     description: 'We Help Together is a donation platform uniting communities to support those in need...',
     image: 'https://res.cloudinary.com/dyjlmweqb/image/upload/v1750796321/1_lugppo.png',
-    liveDemo: 'https://watchit.example.com',
+    liveDemo: 'https://protox11.github.io/we-help-together/',
   },
 ];
 
