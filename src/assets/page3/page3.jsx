@@ -5,19 +5,19 @@ const projects = [
   {
     title: 'MedtrackFit',
     description: 'MedTrackFit: Smart, AI-powered health tracking for personalized wellness insights....',
-    image: 'https://user-images.githubusercontent.com/placeholder/intervueai.png',
+    image: 'https://res.cloudinary.com/dyjlmweqb/image/upload/v1750796322/front_lwn0zr.png',
     liveDemo: 'https://intervueai.example.com',
   },
   {
     title: 'Vartalap',
     description: 'A social app for real-time connection and effortless interaction., ...',
-    image: 'https://user-images.githubusercontent.com/placeholder/blendy.png',
+    image: 'https://res.cloudinary.com/dyjlmweqb/image/upload/v1750796324/log_q3ira8.png',
     liveDemo: 'https://blendy.example.com',
   },
   {
     title: 'We Help Together',
     description: 'We Help Together is a donation platform uniting communities to support those in need...',
-    image: 'https://user-images.githubusercontent.com/placeholder/watchit.png',
+    image: 'https://res.cloudinary.com/dyjlmweqb/image/upload/v1750796321/1_lugppo.png',
     liveDemo: 'https://watchit.example.com',
   },
 ];
