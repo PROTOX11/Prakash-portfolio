@@ -1,11 +1,11 @@
-/* Reset defaults */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Star container */
+
 .star-container {
     position: fixed;
     top: 0;
@@ -16,7 +16,7 @@
     z-index: -1;
 }
 
-/* Animated star images */
+
 .animated-star {
     position: absolute;
     width: 20px;
@@ -29,7 +29,7 @@
     transform-origin: center center;
 }
 
-/* Different animation durations and delays for each image */
+
 .animated-star-1 {
     top: -20%;
     right: -20%;
@@ -65,7 +65,7 @@
     animation-delay: 3s;
 }
 
-/* Keyframes for diagonal movement from top right to bottom left */
+
 @keyframes moveDiagonal {
     0% {
         transform: translate(0, 0);
@@ -85,7 +85,7 @@
     width: 100%;
 }
 
-/* Rest of your CSS remains unchanged */
+
 .front-ptop {
     font-size: 6vw;
     padding-top: 10vh;
@@ -167,7 +167,7 @@
 }
 
 .front-pro span {
-    border: 1px solid rgba(255, 255, 255, 0.4); /* Reduced opacity by 20% from 0.5 */
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 12px;
     font-size: 18px;
     font-weight: 500;
@@ -215,10 +215,10 @@
 
 .front-pro .t4 {
     margin-left: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.4); /* Reduced opacity by 20% from 0.5 */
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-/* Media query for mobile devices */
+
 @media (max-width: 640px) {
     h1 {
         display: none;
@@ -282,7 +282,7 @@
     }
 }
 
-/* Media query for larger screens */
+
 @media (min-width: 641px) {
     .uparwala {
         padding-left: 140px;
@@ -315,16 +315,16 @@
     }
 
     .front-pro span {
-        width: 160px; /* Increased width for desktop */
+        width: 160px;
         height: 44px;
         line-height: 44px;
         font-size: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.4); /* Reduced opacity by 20% from 0.5 */
+        border: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     .front-pro .t4 {
         margin-left: 2rem;
-        border: 1px solid rgba(255, 255, 255, 0.4); /* Reduced opacity by 20% from 0.5 */
+        border: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     .animated-star {

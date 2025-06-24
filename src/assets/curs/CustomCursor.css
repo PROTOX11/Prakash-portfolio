@@ -1,4 +1,4 @@
-/* src/components/CustomCursor.css */
+
 :root {
     --primary-text: #000000;
 }
@@ -16,7 +16,7 @@
     visibility: visible;
     will-change: transform;
     transform: translate(-50%, -50%);
-    /* Ensure initial centering */
+
 }
 
 .cursor-dot {
@@ -32,10 +32,10 @@
     visibility: visible;
     will-change: transform;
     transform: translate(-50%, -50%);
-    /* Ensure initial centering */
+
 }
 
-/* Ensure cursor: none is applied globally */
+
 html,
 body,
 * {

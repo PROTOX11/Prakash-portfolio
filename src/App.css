@@ -1,4 +1,4 @@
-/* src/App.css */
+
 :root {
   --primary-text: #303030;
   --bg-color: #faf7ef;
@@ -11,9 +11,9 @@ html, body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  /* Hide scrollbar for Firefox */
+
   scrollbar-width: none;
-  /* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+
   -ms-overflow-style: none;
 }
 

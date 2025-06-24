@@ -8,24 +8,24 @@ function Navbar({ setActiveTab }) {
         const navbar = navbarRef.current;
         if (!navbar) return;
 
-        // Wait for existing animations to complete (spreadBorder: 2s, fadeInLinks: 2s delay + 1.5s = 3.5s)
+
         const scrollTimeout = setTimeout(() => {
-            // Scroll to the end
+
             navbar.scrollTo({
                 left: navbar.scrollWidth - navbar.clientWidth,
                 behavior: 'smooth',
             });
 
-            // Scroll back to start after a brief pause
+
             setTimeout(() => {
                 navbar.scrollTo({
                     left: 0,
                     behavior: 'smooth',
                 });
-            }, 1500); // 1000ms scroll + 500ms pause
-        }, 3500); // Wait 3.5s for initial animations
+            }, 1500);
+        }, 3500);
 
-        // Cleanup timeouts on unmount
+
         return () => clearTimeout(scrollTimeout);
     }, []);
 

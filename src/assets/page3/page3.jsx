@@ -46,13 +46,6 @@ const techStack = [
 ];
 
 const certificates = [
-  // {
-  //   title: 'AWS Certified Solutions Architect',
-  //   issuer: 'Amazon Web Services',
-  //   date: 'May 2024',
-  //   image: 'https://img.icons8.com/color/96/000000/amazon-web-services.png',
-  //   link: '',
-  // },
   {
     title: 'Google Cloud Skill Badge',
     issuer: 'Google',
@@ -71,19 +64,19 @@ const certificates = [
 ];
 
 function Page3({ activeTab, setActiveTab }) {
-  // State to manage the transition animation
+  
   const [fade, setFade] = useState(true);
 
-  // Handle tab change with fade effect
+  
   const handleTabChange = (tab) => {
-    setFade(false); // Start fade out
+    setFade(false); 
     setTimeout(() => {
-      setActiveTab(tab); // Change tab
-      setFade(true); // Fade in new content
-    }, 300); // Match CSS transition duration
+      setActiveTab(tab); 
+      setFade(true); 
+    }, 300); 
   };
 
-  // Smooth scrolling for anchor links
+  
   useEffect(() => {
     const handleSmoothScroll = (e) => {
       e.preventDefault();
@@ -106,7 +99,7 @@ function Page3({ activeTab, setActiveTab }) {
     };
   }, []);
 
-  // Intersection Observer for project card animations
+  
   useEffect(() => {
     const projectCards = document.querySelectorAll('.project-card');
 
@@ -116,11 +109,11 @@ function Page3({ activeTab, setActiveTab }) {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
           } else {
-            entry.target.classList.remove('visible'); // Remove visible class when out of viewport
+            entry.target.classList.remove('visible'); 
           }
         });
       },
-      { threshold: 0.1 } // Trigger when 10% of the card is visible
+      { threshold: 0.1 } 
     );
 
     projectCards.forEach((card) => {
@@ -132,7 +125,7 @@ function Page3({ activeTab, setActiveTab }) {
         observer.unobserve(card);
       });
     };
-  }, [activeTab]); // Re-run when activeTab changes to re-observe cards
+  }, [activeTab]); 
 
   return (
     <div className="page3-container">

@@ -15,39 +15,39 @@
     gap: 2.5rem;
     border: 1px solid #4b4b4b;
     opacity: 0;
-    animation: spreadBorder 2s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s; /* Smoother easing */
+    animation: spreadBorder 2s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s;
     z-index: 2;
 }
 
 .navbar-container::before {
     content: '';
     position: absolute;
-    width: 10px; /* Smaller initial circle */
+    width: 10px;
     height: 10px;
-    border: 2px solid #000; /* Black border */
-    background: transparent; /* Transparent inside */
+    border: 2px solid #000;
+    background: transparent;
     border-radius: 50%;
     top: 50%;
-    left: -10px; /* Start from the left, adjusted for smaller size */
+    left: -10px;
     transform: translateY(-50%);
-    animation: moveAndBurst 2s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Smoother easing */
+    animation: moveAndBurst 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes moveAndBurst {
     0% {
-        left: -10px; /* Start off-screen left */
+        left: -10px;
         top: 50%;
         width: 10px;
         height: 10px;
     }
     50% {
-        left: 40%; /* Move to between Project and Skills */
-        top: 50%; /* Adjusted to center */
+        left: 40%;
+        top: 50%;
         width: 10px;
         height: 10px;
     }
     60% {
-        width: 20px; /* Smaller burst */
+        width: 20px;
         height: 20px;
     }
     100% {
@@ -89,7 +89,7 @@
     cursor: pointer;
     text-decoration: none;
     opacity: 0;
-    animation: fadeInLinks 1.5s ease-out forwards 2s; /* Delayed and smoother */
+    animation: fadeInLinks 1.5s ease-out forwards 2s;
 }
 
 @keyframes fadeInLinks {
@@ -107,21 +107,20 @@
     transform: translateY(-2px) scale(1.06);
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
     .navbar-container {
-        width: clamp(202.5px, 56.7vw, 324px); /* Reduced width by additional 10% */
-        padding: 1.21rem; /* Increased padding by additional 10% */
-        height: 6.05px; /* Increased height by additional 10% */
+        width: clamp(202.5px, 56.7vw, 324px);
+        padding: 1.21rem;
+        height: 6.05px;
         gap: 1.5rem;
         flex-direction: row;
         flex-wrap: nowrap;
-        overflow-x: auto; /* Enable horizontal scrolling */
-        white-space: nowrap; /* Prevent wrapping */
-        scroll-behavior: smooth; /* Smooth scrolling */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
-        justify-content: flex-start; /* Align links to start for scrolling */
-        position: relative; /* For ::after positioning */
+        overflow-x: auto;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        position: relative;
     }
 
     .navbar-container::after {
@@ -129,9 +128,9 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: 10px; /* Reduced width for subtler fade */
+        width: 10px;
         height: 100%;
-        background: linear-gradient(to left, rgba(250, 247, 239, 0.3), transparent); /* More transparent fade */
+        background: linear-gradient(to left, rgba(250, 247, 239, 0.3), transparent);
         pointer-events: none;
     }
 
@@ -140,12 +139,12 @@
     }
 
     .navbar-container {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 
     .navbar-link {
-        min-width: clamp(70px, 12vw, 100px); /* Smaller links for mobile */
+        min-width: clamp(70px, 12vw, 100px);
         padding: 0.4rem 0.8rem;
         font-size: 0.9rem;
     }
@@ -153,19 +152,19 @@
 
 @media (max-width: 480px) {
     .navbar-container {
-        width: clamp(162px, 48.6vw, 243px); /* Reduced width by additional 10% */
-        padding: 0.968rem; /* Increased padding by additional 10% */
-        height: 6.05px; /* Increased height by additional 10% */
+        width: clamp(162px, 48.6vw, 243px);
+        padding: 0.968rem;
+        height: 6.05px;
         gap: 1rem;
     }
 
     .navbar-container::after {
-        width: 8px; /* Smaller width for subtler fade */
-        background: linear-gradient(to left, rgba(250, 247, 239, 0.3), transparent); /* More transparent fade */
+        width: 8px;
+        background: linear-gradient(to left, rgba(250, 247, 239, 0.3), transparent);
     }
 
     .navbar-link {
-        min-width: clamp(60px, 10vw, 90px); /* Smaller links for smaller screens */
+        min-width: clamp(60px, 10vw, 90px);
         padding: 0.3rem 0.7rem;
         font-size: 0.85rem;
     }

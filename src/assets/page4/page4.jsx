@@ -26,7 +26,7 @@ function Page4() {
         if (leftEl) observer.observe(leftEl);
         if (rightEl) observer.observe(rightEl);
 
-        // Cleanup observer on component unmount
+        
         return () => {
             if (leftEl) observer.unobserve(leftEl);
             if (rightEl) observer.unobserve(rightEl);
@@ -34,7 +34,7 @@ function Page4() {
     }, []);
 
     const handleLinkClick = (e) => {
-        e.preventDefault(); // Prevent default <a> navigation
+        e.preventDefault(); 
         handleEmailClick();
     };
 

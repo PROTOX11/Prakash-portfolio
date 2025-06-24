@@ -12,7 +12,7 @@ function Page2({ setActiveTab }) {
     const certNumRef = useRef(null);
     const expNumRef = useRef(null);
 
-    // Custom hook for reveal animation
+    
     const useRevealOnScroll = (ref) => {
         useEffect(() => {
             const observer = new IntersectionObserver(
@@ -40,7 +40,7 @@ function Page2({ setActiveTab }) {
         }, [ref]);
     };
 
-    // Counter animation function
+    
     const animateCounter = (element, endValue, duration) => {
         let start = 0;
         const stepTime = Math.round(duration / endValue);
@@ -54,7 +54,7 @@ function Page2({ setActiveTab }) {
         }, stepTime);
     };
 
-    // Apply reveal animation to elements
+    
     useRevealOnScroll(aboutMeRef);
     useRevealOnScroll(paraRef);
     useRevealOnScroll(btnsRef);
@@ -62,7 +62,7 @@ function Page2({ setActiveTab }) {
     useRevealOnScroll(certCardRef);
     useRevealOnScroll(expCardRef);
 
-    // Counter animation for numbers
+    
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -70,7 +70,7 @@ function Page2({ setActiveTab }) {
                     if (entry.isIntersecting) {
                         const numElement = entry.target.querySelector('.number');
                         const endValue = parseInt(numElement.getAttribute('data-value'), 10);
-                        animateCounter(numElement, endValue, 1000); // 1-second duration
+                        animateCounter(numElement, endValue, 1000); 
                     }
                 });
             },

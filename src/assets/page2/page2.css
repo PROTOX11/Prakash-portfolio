@@ -1,4 +1,4 @@
-/* Enable smooth scrolling for the entire page */
+
 html {
     scroll-behavior: smooth;
 }
@@ -11,9 +11,9 @@ html {
     font-size: clamp(1rem, 3vw, 1.25rem);
     margin: 1rem clamp(0.25rem, 1vw, 0.5rem);
     color: black;
-    text-align: center; /* Centered for better readability */
-    padding-left: 3rem; /* Increased padding for desktop view */
-    padding-right: 3rem; /* Increased padding for desktop view */
+    text-align: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .aboutwala {
@@ -105,14 +105,14 @@ html {
     pointer-events: none;
 }
 
-/* Card-related styles */
+
 .grid {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1.5fr 1.5fr 0.5fr;
     gap: clamp(0.625rem, 2vw, 1.25rem);
     margin-top: 2rem;
     cursor: pointer;
-    align-items: stretch; /* Changed to stretch to allow height differences */
+    align-items: stretch;
     padding: clamp(0.625rem, 2vw, 1.25rem);
     height: auto;
     min-height: 12rem;
@@ -124,7 +124,7 @@ html {
 
 .card-certificates {
     grid-column: 3 / 4;
-    max-height: 10rem; /* Shorter height for certificate card */
+    max-height: 10rem;
 }
 
 .card-experience {
@@ -141,13 +141,13 @@ html {
     min-width: 0;
     display: flex;
     justify-content: center;
-    transform: translateX(-100px); /* Start off-screen left */
-    opacity: 0; /* Start transparent */
+    transform: translateX(-100px);
+    opacity: 0;
 }
 
 .card.visible {
-    transform: translateX(0); /* Slide to original position */
-    opacity: 1; /* Fully visible */
+    transform: translateX(0);
+    opacity: 1;
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
 
@@ -176,7 +176,7 @@ html {
 }
 
 .card-certificates .card-inner {
-    padding: clamp(0.3rem, 1.5vw, 0.8rem); /* Reduced padding for certificate card to fit shorter height */
+    padding: clamp(0.3rem, 1.5vw, 0.8rem);
 }
 
 .card-bg {
@@ -214,7 +214,7 @@ html {
 }
 
 .number {
-    font-size: clamp(1.75rem, 5vw, 2.5rem); /* Increased font size */
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
     font-weight: bold;
     color: #1f2937;
 }
@@ -227,7 +227,7 @@ html {
 }
 
 .title {
-    font-size: clamp(1rem, 3vw, 1.4rem); /* Increased font size */
+    font-size: clamp(1rem, 3vw, 1.4rem);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: #6b7280;
@@ -235,7 +235,7 @@ html {
 }
 
 .description {
-    font-size: clamp(0.875rem, 2.5vw, 1.1rem); /* Increased font size */
+    font-size: clamp(0.875rem, 2.5vw, 1.1rem);
     color: #4b5563;
 }
 
@@ -256,7 +256,7 @@ html {
     color: #1f2937;
 }
 
-/* Mobile responsiveness */
+
 @media (max-width: 768px) {
     .sec_page {
         padding-top: 3rem;
@@ -266,7 +266,7 @@ html {
         margin: 1rem 0;
         padding: 0 1rem;
         text-align: center;
-        font-size: clamp(1rem, 3vw, 1.3rem); /* Increased for mobile */
+        font-size: clamp(1rem, 3vw, 1.3rem);
     }
 
     .aboutwala {
@@ -278,7 +278,7 @@ html {
     .animated-button {
         margin: 0.5rem 0;
         width: clamp(10rem, 80vw, 15rem);
-        font-size: clamp(0.9rem, 3vw, 1.1rem); /* Increased for mobile */
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
     }
 
     .grid {
@@ -299,13 +299,13 @@ html {
     .card-inner {
         max-width: 95%;
         margin: 0 auto;
-        padding: 0.75rem; /* Slightly reduced for compactness */
+        padding: 0.75rem;
     }
 }
 
 @media (max-width: 480px) {
     .about-me {
-        font-size: clamp(2.2rem, 8vw, 2.8rem); /* Increased for mobile */
+        font-size: clamp(2.2rem, 8vw, 2.8rem);
     }
 
     .sec_page p {
@@ -330,14 +330,14 @@ html {
     }
 
     .number {
-        font-size: clamp(1.4rem, 4vw, 2rem); /* Increased for mobile */
+        font-size: clamp(1.4rem, 4vw, 2rem);
     }
 
     .title {
-        font-size: clamp(0.85rem, 2.5vw, 1.1rem); /* Increased for mobile */
+        font-size: clamp(0.85rem, 2.5vw, 1.1rem);
     }
 
     .description {
-        font-size: clamp(0.7rem, 2vw, 0.95rem); /* Increased for mobile */
+        font-size: clamp(0.7rem, 2vw, 0.95rem);
     }
 }

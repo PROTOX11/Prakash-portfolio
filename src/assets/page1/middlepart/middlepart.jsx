@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { handleEmailClick } from "../../Connect";
 function Front_p() {
     const handleLinkClick = (e) => {
-        e.preventDefault(); // Prevent default <a> navigation
+        e.preventDefault(); 
         handleEmailClick();
     };
     return (

@@ -1,4 +1,4 @@
-// src/components/CustomCursor.jsx
+
 import { useEffect, useRef } from 'react';
 import './CustomCursor.css';
 
@@ -17,24 +17,24 @@ const CustomCursor = () => {
         const cursorDot = cursorDotRef.current;
 
         if (cursor && cursorDot) {
-            const cursorLerpFactor = 0.1; // Slower for outer circle
-            const cursorDotLerpFactor = 0.8; // Very fast for dot to align closely with mouse
-            const speedThreshold = 10; // Pixels per frame for dislocation
+            const cursorLerpFactor = 0.1; 
+            const cursorDotLerpFactor = 0.8; 
+            const speedThreshold = 10; 
             let dislocationBoost = 1;
             let dislocationTimer = null;
 
-            // Set initial position instantly on mouse enter
+            
             const handleMouseEnter = (e) => {
                 mousePos.current = { x: e.clientX, y: e.clientY };
-                cursorPos.current = { x: e.clientX, y: e.clientY }; // Set outer circle instantly
-                cursorDotPos.current = { x: e.clientX, y: e.clientY }; // Set dot instantly
+                cursorPos.current = { x: e.clientX, y: e.clientY }; 
+                cursorDotPos.current = { x: e.clientX, y: e.clientY }; 
                 cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
                 cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
                 cursor.style.opacity = '1';
                 cursorDot.style.opacity = '1';
             };
 
-            // Update cursor position
+            
             const updateCursorPosition = () => {
                 const deltaX = mousePos.current.x - lastMousePos.current.x;
                 const deltaY = mousePos.current.y - lastMousePos.current.y;
@@ -43,10 +43,10 @@ const CustomCursor = () => {
 
                 const speed = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
                 if (speed > speedThreshold) {
-                    dislocationBoost = 0.5; // Increase lag for outer circle
+                    dislocationBoost = 0.5; 
                     clearTimeout(dislocationTimer);
                     dislocationTimer = setTimeout(() => {
-                        dislocationBoost = 1; // Reset after 200ms
+                        dislocationBoost = 1; 
                     }, 200);
                 }
 
@@ -62,26 +62,26 @@ const CustomCursor = () => {
                 animationFrameRef.current = requestAnimationFrame(updateCursorPosition);
             };
 
-            // Handle mouse movement
+            
             const handleMouseMove = (e) => {
                 mousePos.current = { x: e.clientX, y: e.clientY };
             };
 
-            // Handle mouse leave
+            
             const handleMouseLeave = () => {
                 cursor.style.opacity = '0';
                 cursorDot.style.opacity = '0';
             };
 
-            // Add event listeners
+            
             document.addEventListener('mousemove', handleMouseMove);
             document.addEventListener('mouseenter', handleMouseEnter);
             document.addEventListener('mouseleave', handleMouseLeave);
 
-            // Start animation loop
+            
             updateCursorPosition();
 
-            // Cleanup
+            
             return () => {
                 document.removeEventListener('mousemove', handleMouseMove);
                 document.removeEventListener('mouseenter', handleMouseEnter);
