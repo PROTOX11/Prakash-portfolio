@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import './Front_p.css';
+import './front_p.css';
 import './circles.css';
 import '../page1/middlepart/middlepart';
 import starline from '../images/stars/starline.png';
