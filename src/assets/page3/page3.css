@@ -344,12 +344,12 @@ html {
     .project-card {
         width: 300px;
         max-width: 90vw;
-        height: 200px;
+        height: 300px;
         padding: 0.8rem;
     }
 
     .project-image {
-        height: 50px;
+        height: 130px;
         width: 100%;
     }
 

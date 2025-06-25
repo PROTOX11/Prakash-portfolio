@@ -12,7 +12,7 @@ const projects = [
     title: 'Vartalap',
     description: 'A social app for real-time connection and effortless interaction., ...',
     image: 'https://res.cloudinary.com/dyjlmweqb/image/upload/v1750796324/log_q3ira8.png',
-    liveDemo: 'https://blendy.example.com',
+    liveDemo: 'https://vartalap-one.vercel.app/',
   },
   {
     title: 'We Help Together',
@@ -125,7 +125,7 @@ function Page3({ activeTab, setActiveTab }) {
         observer.unobserve(card);
       });
     };
-  }, [activeTab]); 
+  }, [activeTab]);
 
   return (
     <div className="page3-container">
@@ -170,7 +170,7 @@ function Page3({ activeTab, setActiveTab }) {
                   <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="live-demo-link">
                     Live Demo ↗
                   </a>
-                  <button className="details-button">Details →</button>
+                  <button className="details-button" onClick={() => window.open('https://github.com/PROTOX11?tab=repositories')}>Code →</button>
                 </div>
               </div>
             ))}
