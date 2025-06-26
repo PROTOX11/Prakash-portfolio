@@ -6,7 +6,7 @@ const projects = [
     title: 'MedtrackFit',
     description: 'MedTrackFit: Smart, AI-powered health tracking for personalized wellness insights....',
     image: 'https://res.cloudinary.com/dyjlmweqb/image/upload/v1750796322/front_lwn0zr.png',
-    liveDemo: 'https://intervueai.example.com',
+    liveDemo: 'https://www.medtrackfit.help/home',
   },
   {
     title: 'Vartalap',
