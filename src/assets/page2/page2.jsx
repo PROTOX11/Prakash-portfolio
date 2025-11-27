@@ -104,7 +104,7 @@ function Page2({ setActiveTab }) {
                 <div ref={btnsRef} className="aboutwala reveal">
                     <button
                         className="animated-button"
-                        onClick={() => (window.location.href = 'https://drive.google.com/file/d/1TSeh5_SQCHGTEQ745XSXIVGDOBzWC6TO/view?usp=drive_link')}
+                        onClick={() => (window.location.href = 'https://drive.google.com/file/d/1uNpeH-ueKqisx5zcJTNKprgayOp_V8Qs/view?usp=sharing')}
                     >
                         <div className="btn-cells">
                             <span></span><span></span><span></span><span></span><span></span>

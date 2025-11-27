@@ -6,13 +6,19 @@ const projects = [
     title: 'MedtrackFit',
     description: 'MedTrackFit: Smart, AI-powered health tracking for personalized wellness insights....',
     image: 'https://res.cloudinary.com/dyjlmweqb/image/upload/v1750796322/front_lwn0zr.png',
-    liveDemo: 'https://www.medtrackfit.help/home',
+    liveDemo: 'http://82.112.230.73:8080/home',
   },
   {
     title: 'Vartalap',
     description: 'A social app for real-time connection and effortless interaction., ...',
     image: 'https://res.cloudinary.com/dyjlmweqb/image/upload/v1750796324/log_q3ira8.png',
-    liveDemo: 'https://vartalap-one.vercel.app/',
+    liveDemo: 'http://82.112.230.73:5173/login',
+  },
+  {
+    title: 'Aura Elysian',
+    description: 'We Help Together is a donation platform uniting communities to support those in need...',
+    image: 'https://res.cloudinary.com/dgbkepcti/image/upload/v1764253929/pic/aura_fpeoxg.png',
+    liveDemo: 'http://82.112.230.73:4002/',
   },
   {
     title: 'We Help Together',
