@@ -240,7 +240,13 @@
 
     .t2 {
         font-size: 12vw;
-        margin-top: -1rem;
+        /* margin-top: 3rem; */
+        padding-top: -4px;
+    }
+    .t1 {
+        padding-top: -4vw;
+        font-size: 60%;
+        margin-bottom: 0.5rem;
     }
 
     .skill_set {
@@ -289,14 +295,14 @@
     }
 
     .front-ptop {
-        font-size: 50px;
+        font-size: 30px;
         padding-left: 40px;
         gap: 0.2rem;
     }
 
     .t2 {
         font-size: 70px;
-        margin-top: -2.5rem;
+        margin-top: 2rem;
     }
 
     .skill_set {

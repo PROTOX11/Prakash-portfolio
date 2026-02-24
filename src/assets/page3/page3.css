@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 .page3-container {
     max-width: 90vw;
     margin: 0 auto;
@@ -20,7 +19,6 @@ html {
     color: #c4b88f;
     text-align: center;
     margin-bottom: 0.5rem;
-    margin-left: 0;
 }
 
 .page3-subtitle {
@@ -110,21 +108,9 @@ html {
     opacity: 0;
 }
 
-
-.project-card:nth-child(1) {
-    transform: translateX(100px);
-}
-
-
-.project-card:nth-child(2) {
-    transform: translateX(-100px);
-}
-
-
-.project-card:nth-child(3) {
-    transform: translateY(100px);
-}
-
+.project-card:nth-child(1) { transform: translateX(100px); }
+.project-card:nth-child(2) { transform: translateX(-100px); }
+.project-card:nth-child(3) { transform: translateY(100px); }
 
 .project-card.visible {
     opacity: 1;
@@ -140,7 +126,6 @@ html {
     width: 100%;
     height: 60px;
     object-fit: cover;
-
     border-radius: 8px;
     margin-bottom: 0.8rem;
 }
@@ -201,19 +186,25 @@ html {
     padding: 2rem 0;
 }
 
+/* ────────────────────────────────────────────────
+   TECH STACK – 4 ITEMS PER ROW
+───────────────────────────────────────────────── */
+
 .techstack-grid {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+    gap: 1.2rem 1rem;
+    justify-items: center;
     padding: 0 5vw;
+    margin-top: 1.5rem;
 }
 
 .tech-card {
     background: rgba(230, 220, 180, 0.3);
     border-radius: 12px;
-    width: 80px;
-    height: 100px;
+    width: 100%;
+    max-width: 110px;
+    height: 110px;
     box-shadow: 0 0 15px #d1cfc7aa;
     display: flex;
     flex-direction: column;
@@ -222,118 +213,115 @@ html {
     color: #faf7ef;
     cursor: default;
     transition: transform 0.3s ease;
-    padding: 0.8rem;
+    padding: 0.9rem;
 }
 
 .tech-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     box-shadow: 0 0 25px #6c5f36;
 }
 
 .tech-icon {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 0.6rem;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 0.7rem;
     object-fit: contain;
 }
 
 .tech-name {
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     text-align: center;
     color: #a67c00;
+    line-height: 1.2;
 }
 
+/* ────────────────────────────────────────────────
+   CERTIFICATES – 2 PER ROW ON MOBILE
+───────────────────────────────────────────────── */
+
 .certificates-grid {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.2rem 1rem;
+    justify-items: center;
     margin-top: 1.5rem;
-    padding: 0 5vw;
+    padding: 0 4vw;
 }
 
 .certificate-card {
     background: rgba(230, 220, 180, 0.3);
     border-radius: 12px;
-    padding: 0.8rem;
-    width: 160px;
+    padding: 0.9rem 0.7rem;
+    width: 100%;
+    max-width: 180px;
     height: 220px;
     box-shadow: 0 0 15px #a7a5a1aa;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     color: #9d9a92;
     text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    text-align: center;
 }
 
 .certificate-card:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 0 25px #d2cfc1;
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 0 28px #d2cfc1;
 }
 
 .certificate-image {
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
     object-fit: contain;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.9rem;
 }
 
 .certificate-title {
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     color: #afa37d;
-    margin-bottom: 0.2rem;
-    text-align: center;
+    margin-bottom: 0.35rem;
+    line-height: 1.2;
 }
 
 .certificate-issuer {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: #beb594;
-    margin-bottom: 0.2rem;
-    text-align: center;
+    margin-bottom: 0.3rem;
+    line-height: 1.25;
 }
 
 .certificate-date {
-    font-size: 0.75rem;
+    font-size: 0.74rem;
     color: #b8a96c;
-    text-align: center;
+    line-height: 1.3;
 }
 
+/* ───────────────────── MOBILE VIEW ───────────────────── */
 
 @media (max-width: 640px) {
     .page3-container {
         padding: 1rem 0;
     }
 
-    .page3-title {
-        font-size: 2rem;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
+    .page3-title,
     .page3-subtitle {
-        font-size: 1rem;
-        max-width: 95%;
         text-align: center;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .tabs {
-        flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: center;
         gap: 0.8rem;
         padding: 0.2rem 0.5rem;
-        max-width: 90vw;
+        max-width: 95vw;
     }
 
     .tab-button {
         font-size: 0.9rem;
-        padding: 0.2rem 1rem;
+        padding: 0.25rem 1.1rem;
     }
 
     .projects-grid {
@@ -345,82 +333,84 @@ html {
         width: 300px;
         max-width: 90vw;
         height: 300px;
-        padding: 0.8rem;
     }
 
     .project-image {
         height: 130px;
-        width: 100%;
     }
 
-    .project-title {
-        font-size: 1rem;
-    }
-
-    .project-description {
-        font-size: 0.8rem;
-    }
-
-    .live-demo-link {
-        font-size: 0.8rem;
-    }
-
-    .details-button {
-        padding: 0.3rem 0.7rem;
-        font-size: 0.8rem;
-    }
-
+    /* Tech stack mobile: try 4 per row, but allow wrapping */
     .techstack-grid {
-        gap: 1rem;
-        padding: 0 5vw;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 1.2rem 0.9rem;
+        padding: 0 6vw;
+        margin-top: 2rem;
     }
 
     .tech-card {
-        width: 70px;
-        height: 90px;
+        max-width: none;
+        height: 105px;
         padding: 0.8rem;
     }
 
     .tech-icon {
-        width: 32px;
-        height: 32px;
+        width: 38px;
+        height: 38px;
         margin-bottom: 0.6rem;
     }
 
     .tech-name {
-        font-size: 0.85rem;
+        font-size: 0.84rem;
     }
 
+    /* Certificates: 2 per row */
     .certificates-grid {
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.4rem 1rem;
         padding: 0 5vw;
-        margin-top: 1.5rem;
+        margin-top: 1.8rem;
     }
 
     .certificate-card {
-        width: 160px;
-        height: 200px;
-        padding: 0.8rem;
+        max-width: none;
+        width: 100%;
+        height: 210px;
+        padding: 0.9rem 0.6rem;
     }
 
     .certificate-image {
-        width: 50px;
-        height: 50px;
+        width: 58px;
+        height: 58px;
     }
 
     .certificate-title {
-        font-size: 0.9rem;
+        font-size: 0.88rem;
     }
 
     .certificate-issuer {
-        font-size: 0.8rem;
+        font-size: 0.76rem;
     }
 
     .certificate-date {
-        font-size: 0.75rem;
+        font-size: 0.72rem;
     }
 }
 
+@media (max-width: 480px) {
+    .techstack-grid {
+        grid-template-columns: repeat(3, 1fr);   /* 3 per row on smaller phones */
+    }
+}
+
+@media (max-width: 380px) {
+    .techstack-grid {
+        grid-template-columns: repeat(2, 1fr);   /* 2 per row on very small screens */
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
 
 @media (min-width: 641px) {
     .page3-container {
@@ -430,13 +420,11 @@ html {
 
     .page3-title {
         font-size: 2.5rem;
-        text-align: center;
     }
 
     .page3-subtitle {
         font-size: 1.1rem;
         max-width: 700px;
-        text-align: center;
     }
 
     .tabs {
@@ -450,7 +438,6 @@ html {
     }
 
     .projects-grid {
-        gap: 1.5rem;
         padding-left: 80px;
         padding-right: 80px;
     }
@@ -460,61 +447,35 @@ html {
         height: 320px;
         padding: 0;
         overflow: hidden;
-        border-radius: 12px;
     }
 
     .project-image {
         height: 160px;
-        width: 100%;
-        margin: 0;
         border-radius: 12px 12px 0 0;
-        object-fit: cover;
         border: solid 5px #fff8e0;
-        flex-shrink: 0;
-    }
-
-    .project-title {
-        font-size: 1rem;
-        margin: 0.6rem 0 0.4rem 0.8rem;
-    }
-
-    .project-description {
-        font-size: 0.8rem;
-        margin: 0 0.8rem 0.8rem 0.8rem;
-    }
-
-    .live-demo-link {
-        font-size: 0.8rem;
-    }
-
-    .details-button {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.8rem;
+        margin: 0;
     }
 
     .techstack-grid {
-        gap: 1rem;
+        grid-template-columns: repeat(4, minmax(90px, 1fr));
+        gap: 1.5rem 1.2rem;
         padding-left: 80px;
         padding-right: 80px;
     }
 
     .tech-card {
-        width: 80px;
-        height: 100px;
-        padding: 1rem;
+        max-width: 120px;
+        height: 120px;
+        padding: 1.1rem;
     }
 
     .tech-icon {
-        width: 36px;
-        height: 36px;
-        margin-bottom: 0.8rem;
-    }
-
-    .tech-name {
-        font-size: 0.9rem;
+        width: 48px;
+        height: 48px;
     }
 
     .certificates-grid {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
         gap: 1.5rem;
         padding-left: 80px;
         padding-right: 80px;
@@ -525,22 +486,5 @@ html {
         width: 180px;
         height: 220px;
         padding: 1rem;
-    }
-
-    .certificate-image {
-        width: 60px;
-        height: 60px;
-    }
-
-    .certificate-title {
-        font-size: 0.9rem;
-    }
-
-    .certificate-issuer {
-        font-size: 0.8rem;
-    }
-
-    .certificate-date {
-        font-size: 0.75rem;
     }
 }

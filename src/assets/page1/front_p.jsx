@@ -24,7 +24,6 @@ function Front_p() {
 
     return (
         <div>
-            <h1>Prakash kumar</h1>
             <div className="front-p-container" style={{ position: 'relative', minHeight: '30vh' }}>
                 <div className="circles">
                     <div className="bigCircles">
@@ -60,8 +59,8 @@ function Front_p() {
                 <div className='uparwala'>
                     <div className='front-ptop-circles-container' style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
                         <div className='front-ptop'>
-                            <span className='t1'>Full Stack</span>
-                            <span className='t2'>Developer</span>
+                            <span className='t2'>Prakash kumar</span>
+                            <span className='t1'>Full Stack Developer</span>
                         </div>
                     </div>
                     <div className='skill_set'>

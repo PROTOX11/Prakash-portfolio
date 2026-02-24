@@ -8,9 +8,7 @@ function Page2({ setActiveTab }) {
     const projectCardRef = useRef(null);
     const certCardRef = useRef(null);
     const expCardRef = useRef(null);
-    const projectNumRef = useRef(null);
-    const certNumRef = useRef(null);
-    const expNumRef = useRef(null);
+
 
     
     const useRevealOnScroll = (ref) => {
@@ -166,7 +164,7 @@ function Page2({ setActiveTab }) {
                             </div>
                             <span
                                 className="number"
-                                data-value="3"
+                                data-value="5"
                             >
                                 0
                             </span>
@@ -235,7 +233,7 @@ function Page2({ setActiveTab }) {
                             </div>
                             <span
                                 className="number"
-                                data-value="4"
+                                data-value="6"
                             >
                                 0
                             </span>
@@ -298,7 +296,7 @@ function Page2({ setActiveTab }) {
                             </div>
                             <span
                                 className="number"
-                                data-value="3"
+                                data-value="1"
                             >
                                 0
                             </span>

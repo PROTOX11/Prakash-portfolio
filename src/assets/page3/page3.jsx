@@ -6,19 +6,25 @@ const projects = [
     title: 'MedtrackFit',
     description: 'MedTrackFit: Smart, AI-powered health tracking for personalized wellness insights....',
     image: 'https://res.cloudinary.com/dyjlmweqb/image/upload/v1750796322/front_lwn0zr.png',
-    liveDemo: 'http://82.112.230.73:8080/home',
+    liveDemo: 'https://medtrackfit.help',
   },
   {
     title: 'Vartalap',
     description: 'A social app for real-time connection and effortless interaction., ...',
     image: 'https://res.cloudinary.com/dyjlmweqb/image/upload/v1750796324/log_q3ira8.png',
-    liveDemo: 'http://82.112.230.73:5173/login',
+    liveDemo: 'https://vartalap.in.net',
   },
   {
     title: 'Aura Elysian',
     description: 'We Help Together is a donation platform uniting communities to support those in need...',
     image: 'https://res.cloudinary.com/dgbkepcti/image/upload/v1764253929/pic/aura_fpeoxg.png',
-    liveDemo: 'http://82.112.230.73:4002/',
+    liveDemo: 'https://auraelysian.shop',
+  },
+  {
+    title: 'Page Crafter',
+    description: 'Created drag-and-drop customize homepage builder with live preview and clean HTML export.',
+    image: 'https://res.cloudinary.com/dyjlmweqb/image/upload/v1771908564/page-crafter_daor00.png',
+    liveDemo: 'https://page-crafter-ten.vercel.app/',
   },
   {
     title: 'We Help Together',
@@ -53,6 +59,13 @@ const techStack = [
 
 const certificates = [
   {
+    title: 'PBEL Virtual Internship on Web Development',
+    issuer: 'IBM',
+    date: 'Earned Sep 2025',
+    image: 'https://substackcdn.com/image/fetch/$s_!1XDp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb162f2d8-7878-4f8c-9b3f-6184293024dc_1000x1000.jpeg',
+    link: 'https://courses.ibmmooc.skillsnetwork.site/certificates/bc123576e857484babddcbe857a6ba73',
+  },
+  {
     title: 'Google Cloud Skill Badge',
     issuer: 'Google',
     date: 'Earned Sep 2023',
@@ -60,11 +73,32 @@ const certificates = [
     link: 'https://www.credly.com/badges/d65b2a5a-ac1b-411d-999b-b5aa00c89464/public_url',
   },
   {
-    title: 'Introduction to Data Science course',
+    title: 'Bootcamp on Innovation, Design & Entrepreneurship',
+    issuer: 'MIC and AICTE',
+    date: 'Earned Feb 2025',
+    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/All_India_Council_for_Technical_Education_logo.png/250px-All_India_Council_for_Technical_Education_logo.png',
+    link: 'https://alumniapi.mic.gov.in/api/certificates/16525/69283',
+  },
+  {
+    title: 'Certificate for Completion of Python',
+    issuer: 'Google',
+    date: 'Earned Jul 2025',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhiL56AMokHtHVYH3nM92N_dLcUGcrXHeEZw&s',
+    link: 'https://www.guvi.in/certificate?id=q5246oyHz5TE7J7314',
+  },
+  {
+    title: 'Completion of Data Science Course',
     issuer: 'Cisco',
-    date: 'Earned Sep 2023',
-    image: 'https://static-00.iconduck.com/assets.00/cisco-icon-512x512-g1yuowb0.png',
+    date: 'Earned Jul 2023',
+    image: 'https://www.citypng.com/public/uploads/preview/cisco-square-blue-logo-icon-png-735811696612218gzoiadfplh.png',
     link: 'https://www.credly.com/badges/ad2ca419-b7c6-415b-9386-85bf91284166/print',
+  },
+  {
+    title: 'Test Automation with Night.js',
+    issuer: 'BrowserStack',
+    date: 'Earned Apr 2025',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn3qu6U5LyfKjpMWajhiu-U9bMheUb1Hu8UQ&s',
+    link: 'https://drive.google.com/file/d/1luzF4Z-lQyJDQ74l6lqTl6eNGdY3AbyN/view',
   },
 
 ];
