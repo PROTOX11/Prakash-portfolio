@@ -118,7 +118,7 @@ function SkillBar({ name, level, color }) {
         <div className="skill-bar-item">
             <div className="skill-bar-header">
                 <span className="skill-bar-name">{name}</span>
-                <span className="skill-bar-pct">{level}%</span>
+                <span className={`skill-bar-pct skill-bar-pct--${color}`}>{level}%</span>
             </div>
             <div className="skill-bar-track">
                 <div ref={barRef} className={`skill-bar-fill skill-bar-fill--${color}`} style={{ width: 0 }} />

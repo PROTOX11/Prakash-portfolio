@@ -88,6 +88,16 @@
     background: linear-gradient(90deg, #7B2FFF, #B060FF);
 }
 
+.skill-bar-pct--cyan {
+    color: #00D4FF;
+}
+.skill-bar-pct--gold {
+    color: #FFB830;
+}
+.skill-bar-pct--purple {
+    color: #7B2FFF;
+}
+
 .skill-cat-card {
     background: var(--bg-card, rgba(255,255,255,0.04));
     border: 1px solid var(--border-subtle, rgba(255,255,255,0.08));

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './navbar.css';
-import profilePhoto from '../../profile/prakash_photo.png';
+
 import { useRole, ROLES } from '../../../context/RoleContext.jsx';
 
 function Navbar({ setActiveTab }) {
@@ -57,9 +57,7 @@ function Navbar({ setActiveTab }) {
                 <div className="navbar__inner">
                     {/* Logo */}
                     <button className="navbar__logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                        <div className="navbar__logo-bubble">
-                            <img src={profilePhoto} alt="Prakash Kumar" className="navbar__logo-img" />
-                        </div>
+                        <span className="navbar__logo-tag">SE & PM</span>
                     </button>
 
                     {/* Desktop Links */}
@@ -115,7 +113,9 @@ function Navbar({ setActiveTab }) {
             {/* Mobile Drawer */}
             <div className={`mobile-drawer ${menuOpen ? 'mobile-drawer--open' : ''}`} ref={drawerRef}>
                 <div className="mobile-drawer__header">
-                    <img src={profilePhoto} alt="Prakash Kumar" className="navbar__logo-img" />
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                        <span className="navbar__logo-tag">SE & PM</span>
+                    </div>
                     <button className="mobile-drawer__close" onClick={() => setMenuOpen(false)} aria-label="Close menu">✕</button>
                 </div>
 

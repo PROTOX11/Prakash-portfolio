@@ -31,7 +31,7 @@
 }
 .contact-bg-orb--cyan {
     width: 500px; height: 500px;
-    background: #00D4FF;
+    background: var(--theme-accent, #00D4FF);
     top: -100px; left: -80px;
 }
 .contact-bg-orb--purple {
@@ -62,9 +62,9 @@
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #00D4FF;
-    background: rgba(0, 212, 255, 0.1);
-    border: 1px solid rgba(0, 212, 255, 0.2);
+    color: var(--theme-accent, #00D4FF);
+    background: var(--theme-accent-dim, rgba(0, 212, 255, 0.1));
+    border: 1px solid var(--theme-accent-border, rgba(0, 212, 255, 0.2));
     padding: 4px 12px;
     border-radius: 50px;
     margin-bottom: 1rem;
@@ -79,7 +79,7 @@
     line-height: 1.1;
 }
 .contact-title--accent {
-    background: linear-gradient(135deg, #00D4FF, #7B2FFF);
+    background: var(--grad-text, linear-gradient(135deg, #00D4FF, #7B2FFF));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -115,7 +115,7 @@
     transition: border-color 0.3s;
 }
 .availability-card:hover {
-    border-color: rgba(0, 212, 255, 0.25);
+    border-color: var(--theme-accent-border, rgba(0, 212, 255, 0.25));
 }
 
 .availability-card__status {
@@ -168,7 +168,7 @@
     color: #6B7280;
 }
 .avail-meta-icon {
-    color: #00D4FF;
+    color: var(--theme-accent, #00D4FF);
     font-size: 0.8rem;
 }
 
@@ -205,8 +205,8 @@
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
 }
 .contact-social-card--email:hover {
-    border-color: rgba(0, 212, 255, 0.35);
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.12);
+    border-color: var(--theme-accent-border, rgba(0, 212, 255, 0.35));
+    box-shadow: 0 0 20px var(--theme-accent-glow, rgba(0, 212, 255, 0.12));
     background: none;
 }
 
@@ -230,9 +230,9 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .contact-social-card--email .contact-social-icon {
-    background: rgba(0, 212, 255, 0.1);
-    color: #00D4FF;
-    border: 1px solid rgba(0, 212, 255, 0.2);
+    background: var(--theme-accent-dim, rgba(0, 212, 255, 0.1));
+    color: var(--theme-accent, #00D4FF);
+    border: 1px solid var(--theme-accent-border, rgba(0, 212, 255, 0.2));
 }
 
 .contact-social-body { flex: 1; }
@@ -252,7 +252,7 @@
     transition: color 0.2s, transform 0.2s;
 }
 .contact-social-card:hover .contact-social-arrow {
-    color: #00D4FF;
+    color: var(--theme-accent, #00D4FF);
     transform: translate(2px, -2px);
 }
 
@@ -264,7 +264,7 @@
 }
 
 .contact-form-header {
-    background: rgba(0, 212, 255, 0.05);
+    background: var(--theme-accent-dim, rgba(0, 212, 255, 0.05));
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     padding: 14px 24px;
 }
@@ -317,8 +317,8 @@
     box-sizing: border-box;
 }
 .form-input:focus {
-    border-color: rgba(0, 212, 255, 0.4);
-    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.08);
+    border-color: var(--theme-accent-border, rgba(0, 212, 255, 0.4));
+    box-shadow: 0 0 0 3px var(--theme-accent-dim, rgba(0, 212, 255, 0.08));
 }
 .form-input::placeholder { color: #4A5568; }
 
@@ -356,8 +356,8 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: linear-gradient(135deg, #00D4FF, #7B2FFF);
-    color: white;
+    background: var(--grad-primary, linear-gradient(135deg, #00D4FF, #7B2FFF));
+    color: #050a14;
     border: none;
     border-radius: 12px;
     padding: 14px 24px;
@@ -402,7 +402,7 @@
 .contact-success-icon {
     width: 60px; height: 60px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #00D4FF, #22C55E);
+    background: linear-gradient(135deg, var(--theme-accent, #00D4FF), #22C55E);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -428,8 +428,8 @@
 }
 .contact-reset-btn {
     background: none;
-    border: 1px solid rgba(0, 212, 255, 0.3);
-    color: #00D4FF;
+    border: 1px solid var(--theme-accent-border, rgba(0, 212, 255, 0.3));
+    color: var(--theme-accent, #00D4FF);
     padding: 8px 20px;
     border-radius: 8px;
     font-size: 0.85rem;
@@ -438,7 +438,7 @@
     transition: background 0.2s;
 }
 .contact-reset-btn:hover {
-    background: rgba(0, 212, 255, 0.1);
+    background: var(--theme-accent-dim, rgba(0, 212, 255, 0.1));
 }
 
 @media (max-width: 800px) {
