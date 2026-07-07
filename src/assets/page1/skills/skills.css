@@ -1,0 +1,345 @@
+.skills-section {
+    padding: var(--section-padding, 5rem) clamp(1.5rem, 5vw, 3rem);
+    position: relative;
+    z-index: 1;
+}
+
+.skills-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-header {
+    text-align: center;
+    margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.skills-heading {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.skills-subtitle {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: var(--text-secondary, #A0AABA);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ── 2-col grid (unused now, kept for reference) */
+.skills-grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+    align-items: start;
+}
+
+/* ── Single card — full width ─────────────────── */
+.skills-grid-single {
+    display: block;
+}
+
+.skill-cat-card--active {
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+.skill-cat-card--active.skill-cat-card--cyan {
+    border-color: rgba(0, 212, 255, 0.35);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.14), 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.skill-cat-card--active.skill-cat-card--gold {
+    border-color: rgba(255, 184, 48, 0.35);
+    box-shadow: 0 0 30px rgba(255, 184, 48, 0.14), 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.skill-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.skill-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.skill-group-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.28);
+    margin: 0;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skill-bar-fill--cyan {
+    background: linear-gradient(90deg, #00D4FF, #0099CC);
+}
+.skill-bar-fill--gold {
+    background: linear-gradient(90deg, #FFB830, #FF8C00);
+}
+.skill-bar-fill--purple {
+    background: linear-gradient(90deg, #7B2FFF, #B060FF);
+}
+
+.skill-cat-card {
+    background: var(--bg-card, rgba(255,255,255,0.04));
+    border: 1px solid var(--border-subtle, rgba(255,255,255,0.08));
+    border-radius: var(--card-radius, 16px);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.25rem;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-cat-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+}
+
+.skill-cat-card--cyan:hover {
+    border-color: rgba(0, 212, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 24px rgba(0, 212, 255, 0.15);
+    transform: translateY(-6px);
+}
+.skill-cat-card--cyan::before {
+    background: radial-gradient(circle at top left, rgba(0, 212, 255, 0.06), transparent 60%);
+}
+.skill-cat-card--cyan:hover::before { opacity: 1; }
+
+.skill-cat-card--purple:hover {
+    border-color: rgba(123, 47, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 24px rgba(123, 47, 255, 0.15);
+    transform: translateY(-6px);
+}
+.skill-cat-card--purple::before {
+    background: radial-gradient(circle at top left, rgba(123, 47, 255, 0.06), transparent 60%);
+}
+.skill-cat-card--purple:hover::before { opacity: 1; }
+
+.skill-cat-card--gold:hover {
+    border-color: rgba(255, 184, 48, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 24px rgba(255, 184, 48, 0.15);
+    transform: translateY(-6px);
+}
+.skill-cat-card--gold::before {
+    background: radial-gradient(circle at top left, rgba(255, 184, 48, 0.06), transparent 60%);
+}
+.skill-cat-card--gold:hover::before { opacity: 1; }
+
+.skill-cat-card--orange:hover {
+    border-color: rgba(255, 107, 53, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 24px rgba(255, 107, 53, 0.18);
+    transform: translateY(-6px);
+}
+.skill-cat-card--orange::before {
+    background: radial-gradient(circle at top left, rgba(255, 107, 53, 0.06), transparent 60%);
+}
+.skill-cat-card--orange:hover::before { opacity: 1; }
+
+.skill-cat-icon--orange {
+    background: rgba(255, 107, 53, 0.12);
+    border: 1px solid rgba(255, 107, 53, 0.25);
+    box-shadow: 0 0 12px rgba(255, 107, 53, 0.15);
+}
+.skill-cat-card--orange .skill-bar-fill {
+    background: linear-gradient(90deg, #FF6B35, #FFB830);
+}
+
+.skill-cat-card--featured {
+    border-width: 1.5px;
+    transform: scale(1.02);
+    z-index: 2;
+}
+.skill-cat-card--featured.skill-cat-card--purple {
+    border-color: rgba(123, 47, 255, 0.55);
+    box-shadow: 0 0 40px rgba(123, 47, 255, 0.22), 0 8px 32px rgba(0,0,0,0.35);
+}
+.skill-cat-card--featured.skill-cat-card--cyan {
+    border-color: rgba(0, 212, 255, 0.55);
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.22), 0 8px 32px rgba(0,0,0,0.35);
+}
+.skill-cat-card--featured.skill-cat-card--gold {
+    border-color: rgba(255, 184, 48, 0.55);
+    box-shadow: 0 0 40px rgba(255, 184, 48, 0.22), 0 8px 32px rgba(0,0,0,0.35);
+}
+.skill-cat-card--featured.skill-cat-card--orange {
+    border-color: rgba(255, 107, 53, 0.55);
+    box-shadow: 0 0 40px rgba(255, 107, 53, 0.22), 0 8px 32px rgba(0,0,0,0.35);
+}
+.skill-cat-card--dimmed {
+    opacity: 0.72;
+    transform: scale(0.98);
+}
+.skill-cat-card--dimmed:hover {
+    opacity: 1;
+    transform: scale(1.01) translateY(-4px);
+}
+
+.skill-featured-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.skill-cat-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skill-cat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.skill-cat-icon--cyan {
+    background: rgba(0, 212, 255, 0.12);
+    border: 1px solid rgba(0, 212, 255, 0.25);
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.15);
+}
+
+.skill-cat-icon--purple {
+    background: rgba(123, 47, 255, 0.12);
+    border: 1px solid rgba(123, 47, 255, 0.25);
+    box-shadow: 0 0 12px rgba(123, 47, 255, 0.15);
+}
+
+.skill-cat-icon--gold {
+    background: rgba(255, 184, 48, 0.12);
+    border: 1px solid rgba(255, 184, 48, 0.25);
+    box-shadow: 0 0 12px rgba(255, 184, 48, 0.15);
+}
+
+.skill-cat-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary, #E8EAFF);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.skill-cat-subtitle {
+    font-size: 0.75rem;
+    color: var(--text-muted, #5A6475);
+    margin: 0.2rem 0 0;
+    font-weight: 500;
+}
+
+.skill-tech-icons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.skill-tech-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    transition: all 0.2s ease;
+}
+
+.skill-tech-icon:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.skill-tech-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0.9);
+}
+
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.skill-bar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.skill-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-bar-name {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary, #A0AABA);
+}
+
+.skill-bar-pct {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted, #5A6475);
+    font-variant-numeric: tabular-nums;
+}
+
+.skill-bar-track {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent-cyan, #00D4FF), #0099CC);
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 860px) {
+    .skills-grid-two {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .skill-cat-card {
+        padding: 1.25rem;
+    }
+}

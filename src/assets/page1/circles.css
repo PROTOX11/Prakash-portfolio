@@ -1,6 +1,3 @@
-
-
-
 :root {
     --darkColor: #887f64;
     --smDotsWidth: 25px;
@@ -163,5 +160,3 @@
 @keyframes smDotsMoving-9 { 100% { transform: rotate(225deg) translate(48px); } }
 @keyframes smDotsMoving-10 { 100% { transform: rotate(210deg) translate(48px); } }
 @keyframes smDotsMoving-11 { 100% { transform: rotate(195deg) translate(48px); } }
-
-

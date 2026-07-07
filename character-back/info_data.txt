@@ -1,0 +1,134 @@
+## SECTION: Identity
+Name: Prakash
+Role: AI Engineer & Full Stack Developer
+Location: India
+Portfolio: https://prakash-portfolio.vercel.app
+GitHub: https://github.com/PROTOX11
+LinkedIn: https://linkedin.com/in/prakash
+
+Prakash is a passionate AI engineer and full-stack developer who specializes in building intelligent, production-grade web applications. He loves combining AI capabilities with clean, modern user interfaces to create experiences that are both powerful and delightful.
+
+---
+
+## SECTION: Skills & Tech Stack
+
+### Languages
+- Java (primary backend language)
+- Python (AI/ML, FastAPI, LangChain)
+- JavaScript / TypeScript (React, Node.js)
+
+### Frontend
+- React.js, React Native, Expo
+- Tailwind CSS, Vanilla CSS
+- HTML5, CSS3
+
+### Backend & APIs
+- Spring Boot (Java)
+- FastAPI (Python)
+- Node.js + Express.js
+- REST APIs, JWT Auth
+
+### AI & Machine Learning
+- Retrieval Augmented Generation (RAG)
+- FAISS vector search
+- Gemini API (Google Generative AI)
+- LangChain
+- OpenAI API
+- AI Agents
+
+### Databases
+- PostgreSQL
+- MongoDB
+- Redis (caching)
+
+### DevOps & Cloud
+- Docker, Docker Compose
+- AWS (EC2, S3, Lambda)
+- Google Cloud Platform (GCP)
+- Nginx (reverse proxy)
+- GitHub Actions (CI/CD)
+
+### Tools
+- Git, GitHub
+- Postman
+- Jira
+- BrowserStack
+
+---
+
+## SECTION: Projects
+
+### Tickzen
+Tickzen is an AI-Powered Task Management SaaS platform built to help teams work smarter, not harder.
+- Built using React.js (frontend), Spring Boot (backend), PostgreSQL (database).
+- Uses Gemini AI to auto-categorize, prioritize, and estimate task effort.
+- Features real-time collaboration, role-based access control, and smart dashboards.
+- Live demo: https://tickzen.in.net
+
+### MedTrackFit
+MedTrackFit is a smart AI-powered health and fitness tracking platform.
+- Built using React.js, Node.js, MongoDB.
+- AI features include personalized workout plans, diet analysis, and health insights.
+- Users can track exercises, caloric intake, sleep patterns, and receive AI recommendations.
+- Live demo: https://medtrackfit.in.net
+
+### Vartalap
+Vartalap is a real-time social chat application.
+- Built using React.js, Node.js, Socket.IO, MongoDB.
+- Supports real-time direct messaging, group chats, and media sharing.
+- Features user authentication, profile management, and message notifications.
+- Live demo: https://vartalap.in.net
+
+### Aura Elysian
+Aura Elysian is a premium e-commerce platform for fashion and lifestyle products.
+- Built using React.js, Node.js, and PostgreSQL.
+- Features product catalog, cart management, secure checkout, and admin dashboard.
+- Live demo: https://auraelysian.shop
+
+### Page Crafter
+Page Crafter is a drag-and-drop website homepage builder.
+- Allows users to visually customize page layouts with live preview.
+- Exports clean, production-ready HTML code.
+- Built using React.js.
+- Live demo: https://page-crafter-ten.vercel.app
+
+### We Help Together
+We Help Together is a community-driven donation platform.
+- Connects donors with those in need for financial, food, and resource aid.
+- Built using HTML, CSS, and JavaScript.
+- Live demo: https://protox11.github.io/we-help-together/
+
+---
+
+## SECTION: Experience & Achievements
+
+- Built and deployed multiple full-stack AI-integrated applications to production.
+- Implemented RAG pipelines using FAISS and Gemini Embeddings for semantic knowledge retrieval.
+- Developed AI agents capable of autonomous task planning and execution.
+- Led development of Tickzen, a SaaS product from zero to launch.
+- Earned IBM Virtual Internship Certificate in Web Development (Sep 2025).
+- Earned Google Cloud Skill Badge (Sep 2023).
+- Completed Python Certification from Google/GUVI (Jul 2025).
+- Completed Cisco Data Science Course Certificate (Jul 2023).
+- Completed Test Automation with Nightwatch.js Certificate from BrowserStack (Apr 2025).
+- Participated in AICTE Bootcamp on Innovation, Design and Entrepreneurship (Feb 2025).
+
+---
+
+## SECTION: Why Hire Prakash?
+
+- Prakash consistently ships end-to-end products that combine AI intelligence with polished UX.
+- He is self-driven, fast-learning, and thrives in collaborative and startup environments.
+- He bridges the gap between AI/ML research and production-grade software engineering.
+- He has a track record of building real products used by real users.
+- He is highly adaptable — comfortable working across the full stack, from database design to LLM integrations.
+- He is passionate about staying up to date with the latest AI tools, frameworks, and best practices.
+
+---
+
+## SECTION: Contact
+
+- Email: Available via the portfolio contact form
+- GitHub: https://github.com/PROTOX11
+- LinkedIn: https://linkedin.com/in/prakash
+- Portfolio: https://prakash-portfolio.vercel.app

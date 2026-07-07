@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import './page4.css';
 import { handleEmailClick } from "../Connect";
+import { useRole } from '../../context/RoleContext.jsx';
 
 function Page4() {
+    const { role } = useRole();
     const leftRef = useRef(null);
     const rightRef = useRef(null);
 
@@ -20,7 +22,7 @@ function Page4() {
                     }
                 });
             },
-            { threshold: 0.2 }
+            { threshold: 0.05, rootMargin: "0px 0px -50px 0px" }
         );
 
         if (leftEl) observer.observe(leftEl);
@@ -58,120 +60,172 @@ function Page4() {
             setResult("Form Submitted Successfully");
             event.target.reset();
         } else {
-            console.log("Error", data);
+
             setResult(data.message);
         }
     };
 
     return (
-        <div className="page4-container" id="last_page">
-            <h1 className="page4-title">Contact Me</h1>
-            <p className="page4-subtitle">
-                Got a question? Send me a message, and I'll get back to you soon.
-            </p>
+        <section className="contact-section" id="last_page">
+            {/* Background Orbs */}
+            <div className="contact-bg-orb contact-bg-orb--cyan" />
+            <div className="contact-bg-orb contact-bg-orb--purple" />
 
-            <div className="contact-wrapper">
-                <div
-                    className="contact-form-section slide-in-left"
-                    ref={leftRef}
-                >
-                    <h2 className="section-title">Get in Touch</h2>
-                    <p className="section-subtitle">
-                        Have something to discuss? Send me a message and let's talk.
+            <div className="contact-inner">
+                {/* Header */}
+                <div className="contact-header">
+                    <span className="contact-eyebrow">Contact</span>
+                    <h1 className="contact-title">
+                        Get In <span className="contact-title--accent">Touch</span>
+                    </h1>
+                    <p className="contact-desc">
+                        Got a question, job opportunity, or project concept? Send me a message and let's build something exceptional.
                     </p>
-                    <form
-                        className="contact-form"
-                        onSubmit={onSubmit}
-                        method='POST'
-                    >
-                        <label htmlFor="name" className="sr-only">
-                            Your Name
-                        </label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Your Name"
-                            className="input-field"
-                            required
-                        />
-
-                        <label htmlFor="email" className="sr-only">
-                            Your Email
-                        </label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Your Email"
-                            className="input-field"
-                            required
-                        />
-
-                        <label htmlFor="message" className="sr-only">
-                            Your Message
-                        </label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            placeholder="Your Message"
-                            className="textarea-field"
-                            required
-                        />
-
-                        <button type="submit" className="send-button">
-                            <span className="send-icon" aria-hidden="true">
-                                ✈️
-                            </span>{' '}
-                            Send Message
-                        </button>
-                    </form>
                 </div>
 
-                <div className="connect-section slide-in-right" ref={rightRef}>
-                    <h3 className="connect-title">Connect With Me</h3>
-                    <ul className="connect-list">
-                        <li className="connect-item">
-                            <a
-                                href="https://www.linkedin.com/in/prakash-kumar21/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="connect-link linkedin"
+                {/* 2-Column Grid */}
+                <div className="contact-grid">
+                    {/* Left Column (Info Card & Social Links) */}
+                    <div 
+                        className="contact-left slide-in-left" 
+                        ref={leftRef}
+                    >
+                        {/* Availability Card */}
+                        <div className="availability-card">
+                            <div className="availability-card__status">
+                                <span className="availability-dot"></span>
+                                <span className="availability-label">Available for Work</span>
+                            </div>
+                            <h3 className="availability-card__title">Let's Collaborate</h3>
+                            <p className="availability-card__desc">
+                                {role.contactDesc}
+                            </p>
+                            <div className="availability-card__meta">
+                                <div className="avail-meta-item">
+                                    <span className="avail-meta-icon">{role.emoji}</span> {role.label} Role · Noida / Remote
+                                </div>
+                                <div className="avail-meta-item">
+                                    <span className="avail-meta-icon">✉️</span> prakashkr2894@gmail.com
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Social Link Cards */}
+                        <div className="contact-socials">
+                            <a 
+                                href="https://www.linkedin.com/in/protox1142" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="contact-social-card contact-social-card--linkedin"
                             >
-                                <span className="connect-icon" aria-hidden="true">
-                                    in
-                                </span>{' '}
-                                Let's Connect on LinkedIn
+                                <div className="contact-social-icon">in</div>
+                                <div className="contact-social-body">
+                                    <div className="contact-social-name">LinkedIn</div>
+                                    <div className="contact-social-handle">protox1142</div>
+                                </div>
+                                <span className="contact-social-arrow">↗</span>
                             </a>
-                        </li>
-                        <li className="connect-item" onClick={handleLinkClick} rel="noopener noreferrer">
-                            <a
-                                target="_blank"
-                                className="connect-link instagram"
+
+                            <a 
+                                href="https://github.com/PROTOX11" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="contact-social-card contact-social-card--github"
                             >
-                                <span className="connect-icon" aria-hidden="true">
-                                    💌
-                                </span>{' '}
-                                Email prakashkr2894@gmail.com
+                                <div className="contact-social-icon">🐱</div>
+                                <div className="contact-social-body">
+                                    <div className="contact-social-name">GitHub</div>
+                                    <div className="contact-social-handle">PROTOX11</div>
+                                </div>
+                                <span className="contact-social-arrow">↗</span>
                             </a>
-                        </li>
-                        <li className="connect-item">
-                            <a
-                                href="https://github.com/PROTOX11"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="connect-link github"
+
+                            <button 
+                                onClick={handleLinkClick} 
+                                className="contact-social-card contact-social-card--email"
                             >
-                                <span className="connect-icon" aria-hidden="true">
-                                    🐱
-                                </span>{' '}
-                                Github @PROTOX11
-                            </a>
-                        </li>
-                    </ul>
+                                <div className="contact-social-icon">💌</div>
+                                <div className="contact-social-body">
+                                    <div className="contact-social-name">Email</div>
+                                    <div className="contact-social-handle">prakashkr2894@gmail.com</div>
+                                </div>
+                                <span className="contact-social-arrow">↗</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Right Column (Form Card) */}
+                    <div 
+                        className="contact-form-card slide-in-right" 
+                        ref={rightRef}
+                    >
+                        <div className="contact-form-header">
+                            <span className="contact-form-label">Send Message</span>
+                        </div>
+
+                        <form 
+                            className="contact-form" 
+                            onSubmit={onSubmit}
+                            method="POST"
+                        >
+                            <div className="form-group">
+                                <label htmlFor="name" className="form-label">Your Name</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    placeholder="John Doe" 
+                                    className="form-input" 
+                                    required 
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label htmlFor="email" className="form-label">Your Email</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="john@example.com" 
+                                    className="form-input" 
+                                    required 
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label htmlFor="message" className="form-label">Message</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    placeholder="How can I help you?" 
+                                    className="form-input form-textarea" 
+                                    required 
+                                />
+                            </div>
+
+                            {result && (
+                                <div className="form-error" style={{
+                                    background: result.includes("Successfully") ? 'rgba(34, 197, 94, 0.1)' : 'rgba(248, 113, 113, 0.1)',
+                                    borderColor: result.includes("Successfully") ? 'rgba(34, 197, 94, 0.3)' : 'rgba(248, 113, 113, 0.3)',
+                                    color: result.includes("Successfully") ? '#22C55E' : '#F87171'
+                                }}>
+                                    {result}
+                                </div>
+                            )}
+
+                            <button 
+                                type="submit" 
+                                className="form-submit-btn" 
+                                disabled={result === "Sending...."}
+                            >
+                                {result === "Sending...." && <div className="form-spinner" />}
+                                {result === "Sending...." ? "Sending..." : "Send Message ✈️"}
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

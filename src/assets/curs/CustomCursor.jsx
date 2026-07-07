@@ -13,28 +13,30 @@ const CustomCursor = () => {
     const velocity = useRef({ x: 0, y: 0 });
 
     useEffect(() => {
+        const isTouchDevice = window.matchMedia('(pointer: coarse)').matches
+            || /android|iPad|iPhone|iPod|mobile/i.test(navigator.userAgent);
+        if (isTouchDevice) return;
+
         const cursor = cursorRef.current;
         const cursorDot = cursorDotRef.current;
 
         if (cursor && cursorDot) {
-            const cursorLerpFactor = 0.1; 
-            const cursorDotLerpFactor = 0.8; 
-            const speedThreshold = 10; 
+            const cursorLerpFactor = 0.1;
+            const cursorDotLerpFactor = 0.8;
+            const speedThreshold = 10;
             let dislocationBoost = 1;
             let dislocationTimer = null;
 
-            
             const handleMouseEnter = (e) => {
                 mousePos.current = { x: e.clientX, y: e.clientY };
-                cursorPos.current = { x: e.clientX, y: e.clientY }; 
-                cursorDotPos.current = { x: e.clientX, y: e.clientY }; 
+                cursorPos.current = { x: e.clientX, y: e.clientY };
+                cursorDotPos.current = { x: e.clientX, y: e.clientY };
                 cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
                 cursorDot.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
                 cursor.style.opacity = '1';
                 cursorDot.style.opacity = '1';
             };
 
-            
             const updateCursorPosition = () => {
                 const deltaX = mousePos.current.x - lastMousePos.current.x;
                 const deltaY = mousePos.current.y - lastMousePos.current.y;
@@ -43,10 +45,10 @@ const CustomCursor = () => {
 
                 const speed = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
                 if (speed > speedThreshold) {
-                    dislocationBoost = 0.5; 
+                    dislocationBoost = 0.5;
                     clearTimeout(dislocationTimer);
                     dislocationTimer = setTimeout(() => {
-                        dislocationBoost = 1; 
+                        dislocationBoost = 1;
                     }, 200);
                 }
 
@@ -62,26 +64,21 @@ const CustomCursor = () => {
                 animationFrameRef.current = requestAnimationFrame(updateCursorPosition);
             };
 
-            
             const handleMouseMove = (e) => {
                 mousePos.current = { x: e.clientX, y: e.clientY };
             };
 
-            
             const handleMouseLeave = () => {
                 cursor.style.opacity = '0';
                 cursorDot.style.opacity = '0';
             };
 
-            
             document.addEventListener('mousemove', handleMouseMove);
             document.addEventListener('mouseenter', handleMouseEnter);
             document.addEventListener('mouseleave', handleMouseLeave);
 
-            
             updateCursorPosition();
 
-            
             return () => {
                 document.removeEventListener('mousemove', handleMouseMove);
                 document.removeEventListener('mouseenter', handleMouseEnter);
@@ -100,4 +97,4 @@ const CustomCursor = () => {
     );
 };
 
-export default CustomCursor;
+export default CustomCursor;

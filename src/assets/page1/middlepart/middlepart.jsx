@@ -12,7 +12,7 @@ function Front_p() {
                 <a className="social-btn github" href="https://github.com/PROTOX11" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="icon" />
                 </a>
-                <a className="social-btn linkedin" href="https://www.linkedin.com/in/prakash-kumar21/" target="_blank" rel="noopener noreferrer">
+                <a className="social-btn linkedin" href="https://www.linkedin.com/in/protox1142" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin className="icon" />
                 </a>
                 <a className="social-btn gmail" onClick={handleEmailClick} rel="noopener noreferer">

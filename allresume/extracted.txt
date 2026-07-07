@@ -1,0 +1,236 @@
+﻿=== Prakash_Kumar-ProductM.pdf ===
+PRAKASH KUMAR    
+ 
+ 
+ 
+prakash1142  |     Prakash-1142  |    ΓÿÄ   +91 9934202241 
+Recent CSE Graduate | Aspiring Product Manager | Built & Shipped 2 SaaS Products End-to-End      Γ£ë  prakashkr2894@gmail.com  
+Academic Qualifications 
+Year 
+Degree/Certificate 
+Institute 
+Performance 
+2022 ΓÇô 2026 
+B.Tech, CSE 
+Dronacharya Group of Institutions, Greater Noida  
+72% 
+2021 
+Class XII (CBSE) 
+DAV Cantt Area CRRC, Gaya 
+88% 
+2019 
+Class X (CBSE) 
+DAV Medical Unit CRRC, Gaya 
+81% 
+Work Experience 
+Agrasar Soft Consultancy Services, Ghaziabad | Software Developer Intern                                                       Nov 2024 ΓÇô May 2025 
+Objective 
+ΓÇó Deliver a full-stack ERP platform for coaching institutes, translating stakeholder requirements into a working 
+production system. 
+Approach 
+ΓÇó Built REST APIs, an authentication system, and a relational database schema directly from stakeholder requirements. 
+ΓÇó Managed the entire release pipeline (GitHub Actions CI/CD ΓåÆ Ubuntu VPS, Nginx, PM2) and coordinated Git-based 
+version control across the team. 
+Outcomes 
+ΓÇó Shipped a production ERP system with on-time, zero-downtime releases in a fast-paced, startup-style environment. 
+IBM (SkillsNetwork) | Virtual Intern, Web & Mobile Development                                                                        Jul 2025 ΓÇô Aug 2025 
+Objective 
+ΓÇó Build industry-standard backend API and mobile-integration skills through an IBM-certified structured program. 
+Outcomes 
+ΓÇó Completed the certification, covering backend API design, mobile integration patterns, and product development 
+workflows. 
+Projects 
+TickZen ΓÇö AI-Powered Task Management SaaS (Founder & Product Owner)                                                       Live: tickzen.in.net    
+ΓÇó Identified the friction of manual task entry and conceived TickZen, a voice-first AI task management platform. Led the product from idea to production, 
+designing an AI assistant (ZentrixAI) that converts natural language into actionable tasks. 
+ΓÇó Defined the product roadmap by prioritizing features such as role-based access, Kanban workflows, OTP onboarding, and secure payments, balancing user 
+needs with technical feasibility to deliver a seamless MVP. 
+ΓÇó Owned the end-to-end product lifecycleΓÇöfrom requirement gathering, UX decisions, development, deployment, and production operations to continuous 
+iteration based on early-user feedback. 
+ΓÇó Successfully onboarded 25+ active users, achieving ~80% first-pass voice recognition accuracy through prompt engineering and intelligent fallback 
+mechanisms, improving task creation reliability while maintaining a smooth user experience. 
+MedTrackFit ΓÇö Health Recovery SaaS Platform (Founder & Product Lead | Personal Project)                      Live: medtrackfit.in.net    
+ΓÇó Conceived MedTrackFit during the IDE Bootcamp after identifying gaps in how patients track recovery and stay engaged with their treatment plans. Led the 
+product from idea to a live production platform. 
+ΓÇó Defined the product vision, prioritized features, and translated user needs into an MVP, expanding it into a multi-role platform for patients, mentors, doctors, 
+and administrators based on continuous feedback. 
+ΓÇó Collaborated on the end-to-end development and launch of the platform, overseeing planning, implementation, deployment, and post-launch improvements 
+while ensuring a smooth user experience. 
+ΓÇó Currently evolving the product with an AI-powered recovery assistant that interprets patient symptoms and recommends personalized recovery trackers to 
+improve engagement and long-term progress. 
+Aura Elysian ΓÇö D2C E-Commerce Platform                                                                                                            Live: auraelysian.shop 
+ΓÇó Built a full-stack D2C e-commerce platform (React, TypeScript, Node.js, Express, MongoDB) for premium, themed, and custom scented candles, including a 
+custom candle personalization engine allowing customers to upload reference images and specifications for bespoke orders. 
+ΓÇó Integrated Razorpay checkout with backend signature verification, a custom image pre-caching service to improve Core Web Vitals, and a real-time multi-facet 
+filtering system (scent, category, weight, container, festive theme, price). 
+ΓÇó Built an in-app Admin/Employee panel for order management, content updates (homepage carousels, featured collections), and a review system with photo 
+uploads. 
+Relevant Courses 
+Artificial Intelligence 
+Foundation of Management 
+Statistical Methods and Data Analysis 
+Software Engineering 
+Object-Oriented Programming 
+Database Management Systems 
+Skills 
+Product Skills: MVP Scoping & Roadmapping, Feature Prioritization, Requirements Translation, User Feedback Iteration, Cross-functional Collaboration 
+Technical Fluency: REST APIs & Postman ┬╖ SQL, MySQL, MongoDB ┬╖ OpenAI API Integration & Prompt Engineering ┬╖ Git ┬╖ Figma, Notion 
+Certifications 
+Bootcamp on Innovation, Design & Entrepreneurship 
+IBM PBEL Virtual Internship 
+Data Science Course 
+Python Programming 
+ 
+
+
+=== Prakash_Kumar-SE.pdf ===
+PRAKASH KUMAR 
+Full Stack Software Engineer  |  Java ΓÇó React ΓÇó AI Integration 
+prakashkr2894@gmail.com  ΓÇó  +91 9934202241  ΓÇó  Noida  ΓÇó  GitHub  ΓÇó  LinkedIn  ΓÇó  Portfolio 
+PROFESSIONAL SUMMARY 
+Full Stack Developer and Recent Computer Science & Engineering Graduate (B.Tech, 2022ΓÇô2026) with hands-on experience building and deploying scalable 
+web applications. Proficient in Java, Spring Boot, React.js, Node.js, REST APIs, and SQL/NoSQL databases. Skilled in responsive UI design, secure 
+authentication, performance optimization, and end-to-end feature development. Knowledge of DevOps tools including Docker, Kubernetes, CI/CD 
+pipelines, cloud deployment, Git, and Agile practices. 
+TECHNICAL SKILLS 
+Languages  
+ 
+Java, JavaScript 
+Frontend   
+ 
+React.js, Next.js, HTML5, CSS3, Tailwind CSS 
+Backend & Databases 
+Spring Boot, Spring Security, OAuth2, JWT, Node.js, Express.js, FastAPI, REST APIs, Microservices, MySQL, MongoDB 
+AI / LLM   
+ 
+Agentic AI, Prompt Engineering, RAG, LLM, LangChain, Voice-to-Action Agents 
+DevOps / Cloud & Tools  
+Docker, Kubernetes, GitHub Actions, AWS, Nginx, PM2, Ubuntu VPS, Git, Jira, Postman, Razorpay, Brevo SMTP 
+PROFESSIONAL EXPERIENCE 
+Virtual Intern, Web & Mobile Development  |  IBM PBEL (SkillsNetwork)         [Certificate] 
+Jul 2025 ΓÇô Aug 2025  ΓÇó  Remote 
+ΓÇó Completed an IBM-certified virtual internship covering backend API design, RESTful service architecture, and mobile integration patterns. 
+ΓÇó Gained hands-on exposure to industry-standard development workflows and enterprise-level backend architecture principles aligned with 
+scalable Java-based systems. 
+Software Developer Intern  |  Agrasar Consultancy Services 
+Nov 2024 ΓÇô May 2025  ΓÇó  Remote 
+ΓÇó Built responsive, reusable UI components in React.js for a full-stack ERP platform used by coaching institutes, integrating REST APIs to display 
+and manage student, staff, and admin data in real time. 
+ΓÇó Implemented role-based UI views and protected routes for 3 user roles (Admin, Staff, Student), improving navigation clarity and cutting 
+onboarding time by ~40% vs. the prior manual workflow. 
+ΓÇó Collaborated with the backend team on JWT-based authentication and session handling, while using Git for version control and Jira for sprint 
+planning and task tracking within a 4-member team. 
+PROJECTS 
+TickZen ΓÇô AI-Powered Multi-Tenant Task Management SaaS  [GitHub]      [Live] 
+React.js ΓÇó Node.js ΓÇó FastAPI ΓÇó MongoDB ΓÇó AssemblyAI ΓÇó OpenRouter API ΓÇó Docker ΓÇó GitHub Actions 
+ΓÇó Designed and launched a production-grade multi-tenant SaaS featuring Kanban boards, multi-role access (Admin/Developer), OTP signup via 
+Brevo, and Razorpay payment integration. 
+ΓÇó Developed ZentriXAΓÇöan embedded voice-to-action AI agentΓÇötranscribing speech via AssemblyAI, routing intent through an LLM, and 
+executing real CRUD operations with no manual clicks. 
+ΓÇó Containerised the full stack with Docker and automated build-deploy via GitHub Actions CI/CD; reduced release cycles from manual to sub-5-
+minute deployments. 
+MedTrackFit ΓÇô Health Recovery SaaS Platform  [GitHub]      [Live] 
+Spring Boot ΓÇó Spring Security ΓÇó OAuth2 ΓÇó JWT ΓÇó MySQL ΓÇó Kubernetes ΓÇó Istio ΓÇó GitHub Actions 
+ΓÇó Architected a 4-role access system (Patient, Recovered User, Mentor, Doctor) with Spring Security and OAuth2; developed 15+ REST APIs for 
+health tracking, messaging, and mentorship scheduling. 
+ΓÇó Deployed via full CI/CD pipeline with Kubernetes orchestration, Istio service mesh (mTLS + traffic management), and Nginx reverse proxy on 
+Ubuntu VPS with zero-downtime uptime. 
+VARTALAP ΓÇô Real-Time Chat Application  [GitHub]      [Live] 
+Node.js ΓÇó Socket.IO ΓÇó React.js ΓÇó MongoDB ΓÇó Docker 
+ΓÇó Built a real-time bidirectional chat app using Socket.IO with persistent MongoDB message storage, user authentication, and full Docker 
+containerisation for reproducible deployment. 
+EDUCATION 
+B.Tech ΓÇô Computer Science & Engineering 
+2022 ΓÇô 2026 
+Dronacharya Group of Institutions, Greater Noida (AKTU)  |  CGPA: 7.2 / 10 
+Class XII (CBSE) 
+2021 
+DAV Cantt Area CRRC, Gaya  |  88% 
+Class X (CBSE) 
+2019 
+DAV Medical Unit CRRC, Gaya  |  81% 
+CERTIFICATIONS 
+ΓÇó  Innovation, Design & Entrepreneurship Bootcamp  (By ΓÇô AICTE, Showcased startup in Top 10)   
+ΓÇó  Google Cloud Skills Boost (10+ Skill Badges, Arcade Level 3 ΓÇô Gold League) 
+ΓÇó  Python Programming  (GUVI / HCL)   
+ΓÇó  Data Science Fundamentals  (Cisco / Credly)   
+
+
+=== Prakash_kumar-DevOpsEng.pdf ===
+PRAKASH KUMAR 
+DevOps |  Cloud Engineer 
+Noida, India  ΓÇó  +91 9934202241  ΓÇó  prakashkr2894@gmail.com  ΓÇó  GitHub  ΓÇó  LinkedIn  ΓÇó  Portfolio 
+PROFESSIONAL SUMMARY 
+DevOps Engineer with hands-on experience in CI/CD automation, Kubernetes orchestration, and cloud infrastructure. Built and deployed 4 production 
+SaaS applications using Docker, Kubernetes, GitHub Actions, and AWS. Skilled in Infrastructure as Code, observability, and zero-downtime deployments. 
+TECHNICAL SKILLS 
+Cloud & Infra:  AWS, Ubuntu VPS, Linux administration, Nginx, Bash 
+DevOps & CI-CD:  GitHub Actions, Docker, Docker Compose, Docker Hub, Kubernetes, Helm, Terraform 
+Monitoring & Security:   Prometheus, Grafana, Spring Security, OAuth2, JWT, RBAC, Nginx SSL/TLS,  
+Programming & Databases:   Java, JavaScript, Python, MySQL, MongoDB     
+Version Control:   Git, GitHub 
+PROFESSIONAL EXPERIENCE 
+Virtual Intern, Web & Mobile Development  |  IBM PBEL (SkillsNetwork)             [Certificate]                          Jul 2025 ΓÇô Aug 2025  ΓÇó  Remote 
+ΓùÅ 
+Completed MERN stack training and applied Git version control, CI/CD concepts, and agile-aligned SDLC workflows through mentor-guided 
+projects. 
+ΓùÅ 
+Gained mentored exposure to industry-standard backend API design and enterprise-level development practices under guidance from an IBM 
+professional. 
+Software Developer Intern  |  Agrasar Soft Consultancy                                                                          Nov 2024 ΓÇô May 2025  ΓÇó  Ghaziabad 
+ΓùÅ 
+Engineered GitHub Actions CI/CD pipeline for a production ERP platform ΓÇö automated build, test, Docker image push, and zero-downtime 
+deployment to Ubuntu VPS on every commit, cutting deployment effort by 80%+. 
+ΓùÅ 
+Configured Nginx reverse proxy, SSL/TLS termination, and PM2 process management on Linux server; maintained dev-to-production parity 
+using Docker containerization across the full stack. 
+ΓùÅ 
+Built and deployed full-stack REST APIs (15+ endpoints), JWT-based authentication, and MongoDB schema using React.js, Node.js, and 
+MongoDB ΓÇö shipped to live concurrent users. 
+PROJECTS 
+Cloud-Native Microservices Platform ΓÇö Kubernetes + Istio + OPA  [GitHub] 
+Docker ┬╖ Kubernetes ┬╖ Istio ┬╖ OPA ┬╖ Helm ┬╖ GitHub Actions ┬╖ Linux 
+ΓùÅ 
+Architected Kubernetes microservices using Helm charts and Infrastructure as Code ΓÇö version-controlled Deployments, Services, ConfigMaps, 
+Secrets, and Ingress controllers. 
+ΓùÅ 
+Deployed Istio service mesh with canary deployments, mTLS, circuit breaking, distributed tracing via Jaeger, and observability using 
+Prometheus and Grafana. 
+ΓùÅ 
+Built GitHub Actions CI/CD pipeline: build ΓåÆ Docker image push ΓåÆ Kubernetes deploy ΓåÆ triggered rollback on failure. 
+TickZen ΓÇö AI-Powered Task Management SaaS  [GitHub] |  Live: tickzen.in.net 
+React.js ┬╖ Node.js ┬╖ MongoDB ┬╖ Docker ┬╖ GitHub Actions ┬╖ Ubuntu VPS ┬╖ Nginx   
+ΓùÅ 
+Built end-to-end CI/CD pipeline with GitHub Actions ΓÇö git push triggers Docker build, registry push, and zero-downtime deployment to 
+production Linux server. 
+ΓùÅ 
+Managed Nginx reverse proxy, SSL/TLS certificate lifecycle, and PM2 process supervision on Ubuntu VPS. 
+MedTrackFit ΓÇö Health Recovery SaaS Platform  [GitHub] |  Live: medtrackfit.in.net 
+Spring Boot ┬╖ MySQL ┬╖ GitHub Actions ┬╖ Nginx ┬╖ PM2 ┬╖ Ubuntu VPS ┬╖ Linux   
+ΓùÅ 
+Automated Spring Boot CI/CD pipeline with GitHub Actions ΓÇö builds JAR artifacts and deploys to Ubuntu Linux with Nginx and PM2 for zero-
+downtime production hosting. 
+ΓùÅ 
+Containerized the application using Docker and Docker Compose, configured Nginx as a reverse proxy with SSL, and deployed it on a self-
+managed Ubuntu VPS. 
+ΓùÅ 
+Enforced OAuth2 and 4-role RBAC system (Patient, Mentor, Doctor, Recovered User) using Spring Security. 
+EDUCATION 
+B.Tech ΓÇô Computer Science & Engineering 
+2022 ΓÇô 2026 
+Dronacharya Group of Institutions, Greater Noida (AKTU)  |  72% 
+Class XII (CBSE) 
+2021 
+DAV Cantt Area CRRC, Gaya  |  88% 
+Class X (CBSE) 
+2019 
+DAV Medical Unit CRRC, Gaya  |  81% 
+CERTIFICATIONS 
+ΓùÅ 
+IBM PBEL Virtual Internship ΓÇô SkillsNetwork 
+ΓùÅ 
+Google Cloud Skills Boost (10+ Skill Badges, Arcade Level 3 ΓÇô Gold League) 
+ΓùÅ 
+Innovation, Design & Entrepreneurship Bootcamp (AICTE) ΓÇö Showcased startup in Top 10 (Top 4%) among 250+ startups 
+
+
